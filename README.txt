@@ -59,8 +59,9 @@ HOW TO PLAY:     `     .     *           `                 *       `
        # wrong folder, but it worked fine with 'rvm all do'
 
 
-2.  Second, download the GalaxyCraft folders, abbreviated 'g', at #
-
+2.  Second, clone g.git from https://github.com/MattLemmon/g.git
+    This will give you everything you need to play GalaxyCraft.
+    It is all there in the folder /g
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,12 +1,4 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-`                              ____                                   `
-`                             / __ \                                  `
-`                            / /  \ \                                 `
-`                            \ \  / /                                 `
-`                             \/  \/                                  `
-`                           opensource                                `
-`                                                                     `
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .     `         *           `           *     `             *  .    .
   *       .              .       .                  .              `  
        `           *           `            +           -        .
@@ -39,16 +31,14 @@ HOW TO PLAY:     `     .     *           `                 *       `
    ,       .       .      `                            .        .     .
  .     `      .        .  `     *             .               `  .
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  I feel like I might need to use something like:
-     @drones = Array.new
-
-  along with something like:
-     if @drones.size < 10 then
-       @drones.push(Drone.new(@drone))
-     end
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              ____                                   
+                             / __ \                                  
+                            / /  \ \                                 
+                            \ \  / /                                 
+                             \/  \/                                  
+                           opensource                                
+                                                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
   I N S T A L L A T I O N :
@@ -213,5 +203,17 @@ Long-term goals:
     Thank you sincerely to jlnr for providing Gosu. It is awesome.
 
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HOW TO SPAWN DRONES FROM DRONE CLASS?
+
+  I feel like I might need to use something like:
+     @drones = Array.new
+
+  along with something like:
+     if @drones.size < 10 then
+       @drones.push(Drone.new(@drone))
+     end
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

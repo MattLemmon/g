@@ -1,26 +1,25 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.     `         *           `           *     `             *  .    .
-  *       .              .       .                  .              `  
-       `           *           `            +           -        .
+  *       .    `         .       .       -     `     .              `  
+       `           *           `     '       .           -        .
   `          *             .                   *           .          .
-  G A L A X Y   C R A F T   
-  .      `       .        .   g5   *                `           * `    
+ .   G A L A X Y   C R A F T           .      `         .
+  -       `       .       .    g5                  `           * `    
          *            .              c o s m i c   s o u p       `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `    powered by GOSU
-  *       .              .            *             .                 *
+  *       .              .            *             .                *
        `           *                        *           .     .
 HOW TO PLAY:     `     .     *           `                 *       `
-   .        .      `      *                            `           .  `
-  `   -                      .                    -              .  `
-  The goal of the game is to spawn more drones.
+   .        .      `      *         .                   `           .  
+  `   -                      .                    .             .  `
+  The real goal of the game is to spawn more drones.       `         .
 .     *        `  .                 -            `       .        ,
   Right now there are only four drones.      *     .           `      .
  .     `         *             .   `   .  `   .        `  .        -
-  I need to create various instances of each of the four drone classes.
-    . `      .                -   .    -     `           *  
-  How do I do this?     .            *             .                  *
- `      `                   *                  *       . `          .
+  We need to create various instances of each of the four drone classes.
+    . `      .                -   .    -     `           *         .
+  How do I do this?     .            *             .           *    -
+ `      `                   *                  *       . `     .    
    .        .      `       *      -                     *         .  `
 .     `         *                       *     `             *         
   -       You win if you can help me figure this out.     *         .
@@ -31,25 +30,25 @@ HOW TO PLAY:     `     .     *           `                 *       `
    ,       .       .      `                            .        .     .
  .     `      .        .  `     *             .               `  .
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
                               ____                                   
                              / __ \                                  
                             / /  \ \                                 
                             \ \  / /                                 
                              \/  \/                                  
                            opensource                                
-                                                                     
+                                                                    
+
+                     I N S T A L L A T I O N
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-  I N S T A L L A T I O N :
-
-
-
-1.  First install the Gosu gem for Ruby.
+1.  First, install the Gosu gem for Ruby.
 
           $ sudo gem install gosu
 
-    Detailed Gosu Install Instructions by OS:
+    Follow the detailed Gosu install instructions:
        mac     -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-OS-X
        linux   -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
        windows -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Windows
@@ -60,15 +59,18 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 
 2.  Second, clone g.git from https://github.com/MattLemmon/g.git
-    This will give you everything you need to play GalaxyCraft.
-    It is all there in the folder /g
+    This will give you everything you need to start playing GalaxyCraft.
+
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-   P L A Y I N G    G A L A X Y  C R A F T  . . .
+               P L A Y I N G    G A L A X Y C R A F T 
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 1.  In the terminal, cd to /g/vers/g0/ and type 'ruby g0.rb'
@@ -148,11 +150,16 @@ HOW TO PLAY:     `     .     *           `                 *       `
     This saves you the trouble of having to dig all the way down into
     the gem folder when you want to review documentation.
 
+
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-   L O N G   T E R M   G A M E P L A Y
+                L O N G   T E R M   G A M E P L A Y
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Short-term goal:
@@ -164,14 +171,14 @@ Medium-term goals:
 
    - Improve the version management system.
 
-   - Add a beep sound when drones get stars.
+   - Add a sound effect when drones eat stars.
 
    - Add a music soundtrack.
 
    - Make it so that the drones themselves automatically spawn new
      drones. In a word, get the drones to reproduce.
 
-   - Add drone animations, similar in style to the twirling star animation.
+   - Add drone character animations.
 
    - Make the overall map much, much bigger, with many, many more drones.
 
@@ -193,10 +200,8 @@ Long-term goals:
    - Have an adequate version management system to be able to cycle through
      different versions and observe changes.
 
-   - Create Ant class drones with ability to communicate with pheremone
+   - Create Ant class drones with ability to communicate with pheromone
      trails.
-
-   - Make it so that drones get full and can't keep on eating.
 
    - Give some drones the ability to transport food.
 
@@ -204,12 +209,14 @@ Long-term goals:
 
    - Create save states.
 
-   - Observe artifical life.
+   - Observe artificial life.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 HOW TO SPAWN DRONES FROM DRONE CLASS?
+
 
   I feel like I might need to use something like:
      @drones = Array.new
@@ -218,6 +225,7 @@ HOW TO SPAWN DRONES FROM DRONE CLASS?
      if @drones.size < 10 then
        @drones.push(Drone.new(@drone))
      end
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

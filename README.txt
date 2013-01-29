@@ -73,7 +73,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 1.  In the terminal, cd to /g/vers/g0/ and type 'ruby g0.rb'
 
-      .../g/vers/g0$  ruby g0.rb      g0     zero version 
+      .../g/vers/g0$  ruby g0.rb           # runs g0  zero version 
 
     The zero version is the Gosu tutorial game which comes built-in with
     the gem.
@@ -89,14 +89,14 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 
 2.  You can get a sense of how the game is evolving so far. The drones are
-    pretty competitive.
+    getting pretty competitive, especially Drone 3. Can you keep the drones
+    from getting more stars than you?...
 
-    But the REAL goal of the game is to spawn more drones. To do this, we
-    open 'g.rb' in a text editor.
+    But the REAL goal of the game is to spawn more drones.
 
 
-3.  If we compare the different g#.rb files, we can see how the program has
-    evolved so far.
+3.  If we compare the different g#.rb files in a text editor, we can see 
+    how the program has evolved so far.
 
         g0.rb overall layout   (g0)    # zero version     3 classes
            Player class
@@ -132,15 +132,21 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
     The individual stars are all spawned out of one, small class.
 
-    This is the great challenge of the game of GalaxyCraft: figuring
+    This is the great challenge of the game of GalaxyCraft - figuring
     out how to use the Drone classes to spawn multiple drones, similar
     to the Star class.
 
 
 4.  Feel free to have fun with the program. Perhaps you would like to
     create a fifth Drone class? Or perhaps you'd like to create a
-    new skin pack? Make any mods you want.
+    new skin pack? Make any mods you want. You can easily change the
+    backgroung image, the drone images, etc.
 
+
+5.  Play around with Gosu. The tutorials and example materials are
+    included for convenient access in    '/g/vers/gosu_lib'
+    This saves you the trouble of having to dig all the way down into
+    the gem folder when you want to review documentation.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -165,6 +171,8 @@ Medium-term goals:
    - Make it so that the drones themselves automatically spawn new
      drones. In a word, get the drones to reproduce.
 
+   - Add drone animations, similar in style to the twirling star animation.
+
    - Make the overall map much, much bigger, with many, many more drones.
 
    - Investigate the possibility of making drones bump off of each other.
@@ -185,24 +193,18 @@ Long-term goals:
    - Have an adequate version management system to be able to cycle through
      different versions and observe changes.
 
-   - Create save states.
-
    - Create Ant class drones with ability to communicate with pheremone
      trails.
 
-   - Set food maximum consumption for Drone classes.
+   - Make it so that drones get full and can't keep on eating.
 
    - Give some drones the ability to transport food.
 
+   - Create Predator class, which eats other drones.
+
+   - Create save states.
+
    - Observe artifical life.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-    Thank you sincerely to jlnr for providing Gosu. It is awesome.
-
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -216,5 +218,13 @@ HOW TO SPAWN DRONES FROM DRONE CLASS?
      if @drones.size < 10 then
        @drones.push(Drone.new(@drone))
      end
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+    Thank you sincerely to jlnr for providing Gosu. It is awesome.
+
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

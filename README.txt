@@ -106,7 +106,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
     the gem.
 
       /.../g$  ruby g1.rb          # runs g1 version
-      /.../g$  ruby g2.rb          # g2 is broken - doesn't work
+      /.../g$  ruby g2.rb          # runs g2 version
       /.../g$  ruby g3.rb          # runs g3 version
       /.../g$  ruby g3.rb          # runs g4 version
       /.../g$  ruby g5.rb          # runs g5 version
@@ -164,10 +164,10 @@ HOW TO PLAY:     `     .     *           `                 *       `
 4.  Feel free to have fun with the program. Perhaps you would like to
     create a fifth Drone class? Or perhaps you'd like to create a
     new skin pack? Make any mods you want. You can easily change the
-    backgroung image, the drone images, etc.
+    background image, the drone images, etc.
 
 
-5.  Play around with Gosu. The tutorials and example materials are
+5.  Play around with Gosu. The tutorials and reference materials are
     included for convenient access in    '/g/vers/gosu_lib'
     This saves you the trouble of having to dig all the way down into
     the gem folder when you want to review documentation.

@@ -3,7 +3,7 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .   g5                   `           * `    
+  -       `       .       .   g6                   `           * `    
          *            .            c o s m i c   s o u p        `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `    powered by gosu
@@ -110,7 +110,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g3.rb          # runs g3 version
       /.../g$  ruby g3.rb          # runs g4 version
       /.../g$  ruby g5.rb          # runs g5 version
-
+      /.../g$  ruby g6.rb          # runs g6 version
 
 2.  You can get a sense of how the game is evolving so far. The drones are
     getting pretty competitive, especially Drone 3. Can you keep the drones
@@ -141,7 +141,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
            Star class
            Window class
 
-        g4.rb               7 classes
+        g5.rb               7 classes
            Player class
            Drone class
            Drone2 class
@@ -158,7 +158,8 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
     This is the great challenge of the game of GalaxyCraft - figuring
     out how to use the Drone classes to spawn multiple drones, similar
-    to the Star class.
+    to the Star class. In g6 I was able to spawn drones, but I can't
+    figure out how to get the spawned drones to move...
 
 
 4.  Feel free to have fun with the program. Perhaps you would like to
@@ -253,6 +254,7 @@ HOW TO SPAWN DRONES FROM DRONE CLASS?
   as well as:
     @drones.each { |drone| drone.draw }
 
+In g6 we're halfway there...
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

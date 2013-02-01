@@ -3,7 +3,7 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .   g7                   `           * `    
+  -       `       .       .   g6                   `           * `    
          *            .            c o s m i c   s o u p        `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `    powered by gosu
@@ -33,9 +33,9 @@ HOW TO PLAY:     `     .     *           `                 *       `
 .     `         *                       *     `          *            
   -       You win if you can help me figure this out.            `  .
        `           *    .                   *            `            
-   *         -       J O N   W I N S  ! ! !         *         '  
+   *         -                .       `      .      *         '  
   `        .      `         .    .      ,      `       *           .
-.      .           `      .   `                           *           
+.      .            `     .   `                           *           
    -        .    .       `        .        .      `            .      .
  .     `      `        .  `              `    .               `  .
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -255,11 +255,6 @@ HOW TO SPAWN DRONES FROM DRONE CLASS?
     @drones.each { |drone| drone.draw }
 
 In g6 we're halfway there...
-
-Jon made it work!
-
-Jon is the first person to beat GalaxyCraft!
-
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

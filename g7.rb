@@ -72,7 +72,7 @@ class Player
     end
   end
 
-  def get_movements
+  def movement
     if @window.button_down? Gosu::KbLeft or @window.button_down? Gosu::GpLeft then
       turn_left
     end
@@ -155,7 +155,7 @@ class Drone
     end
   end
 
-  def get_movements
+  def movement
     c = rand(100)
     if c < 90 then
       turn_left
@@ -223,7 +223,7 @@ class GameWindow < Gosu::Window
 
   
   def update
-    @player.get_movements
+    @player.movement
     @player.move
     @player.collect_stars(@stars)
 
@@ -233,7 +233,7 @@ class GameWindow < Gosu::Window
     end
 
     @drones.each do |drone|
-      drone.get_movements
+      drone.movement
       drone.move
       drone.collect_stars(@stars)
     end

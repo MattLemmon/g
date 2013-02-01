@@ -95,9 +95,9 @@ end
 #
 class Drone
 
-	def initialize(window, droner)
+	def initialize(window, drone_img)
     @window = window
-    @droner = droner
+    @drone_img = drone_img
 #		@image = Gosu::Image.new(window, "media/Drone1.1.bmp", false)
     @color = Gosu::Color.new(0xff000000)
     @color.red = rand(256 - 40) + 40
@@ -138,7 +138,7 @@ class Drone
 
 
   def draw
-    img = @droner
+    img = @drone_img
     img.draw_rot(@x, @y, ZOrder::Drone, @angle)
 #    img.draw_rot(@x, @y, ZOrder::Drone, @angle, 1, 1, @color, :add)
 # draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
@@ -210,7 +210,7 @@ class GameWindow < Gosu::Window
     @player = Player.new(self)
     @player.warp(500,300)
 
-    @droner = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
+    @drone_img = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
 #    @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)
     @drones = Array.new
 
@@ -229,7 +229,7 @@ class GameWindow < Gosu::Window
 
 
     if @drones.size < 10 then
-      @drones.push(Drone.new(self, @droner))
+      @drones.push(Drone.new(self, @drone_img))
     end
 
     @drones.each do |drone|

@@ -95,7 +95,8 @@ end
 #
 class Drone
 
-	def initialize(droner)
+	def initialize(window, droner)
+    @window = window
     @droner = droner
 #		@image = Gosu::Image.new(window, "media/Drone1.1.bmp", false)
     @color = Gosu::Color.new(0xff000000)
@@ -154,24 +155,21 @@ class Drone
     end
   end
 
-  # def get_movements
-  #   c = rand(100)
-  #   if c < 90 then
-  #     turn_left
-  #   end
-  #   if c > 10 then
-  #     turn_right
-  #   end
-  #   if c < 70 then
-  #     accelerate
-  #   end
-  #   if button_down? Gosu::KbSpace then
-  #     warp(rand(1000), rand(600))
-  #   end
-  #   move
-
-  #   collect_stars(@stars)
-  # end
+  def get_movements
+    c = rand(100)
+    if c < 90 then
+      turn_left
+    end
+    if c > 10 then
+      turn_right
+    end
+    if c < 70 then
+      accelerate
+    end
+    if @window.button_down? Gosu::KbSpace then
+      warp(rand(1000), rand(600))
+    end
+  end
 end
 
 
@@ -231,7 +229,13 @@ class GameWindow < Gosu::Window
 
 
     if @drones.size < 10 then
-      @drones.push(Drone.new(@droner))
+      @drones.push(Drone.new(self, @droner))
+    end
+
+    @drones.each do |drone|
+      drone.get_movements
+      drone.move
+      drone.collect_stars(@stars)
     end
 #
 #

@@ -77,10 +77,13 @@ HOW TO PLAY:     `     .     *           `                 *       `
        linux   -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
        windows -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Windows
 
+       # On mac, scroll down past the C++ instructions, and follow the Ruby
+         instructions. 
+
        # On Ubuntu with rvm I ended up using 'rvm all do gem install gosu'
-       # For some reason, 'rvm gem install gosu' was putting the gem in the
-       # wrong folder, but it worked fine with 'rvm all do'
-       # I had to install some dependency packages as well.
+         For some reason, 'rvm gem install gosu' was putting the gem in the
+         wrong folder, but it worked fine with 'rvm all do'
+         I had to install some dependency packages as well.
 
 
 2.  Second, clone g.git from https://github.com/MattLemmon/g.git

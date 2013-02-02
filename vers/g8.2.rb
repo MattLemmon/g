@@ -2,7 +2,7 @@ require 'gosu'
 
 
 module ZOrder
-  Background, Stars, Player, Drone, UI = *0..4
+  Background, Stars, Player, SubDrone, Drone, UI = *0..5
 end
 
 
@@ -95,15 +95,16 @@ end
 #
 class Drone
 
-	def initialize(window, drone_img, x, y, angle)
+	def initialize(window, spawn, x, y, z)
     @window = window
-    @drone_img = drone_img
+    @spawn = spawn
     @x = x
     @y = y
-    @angle = angle
-#		@x = rand * 1000
-#		@y = rand * 600
-#   @angle = (45.5 + rand(315))
+    @z = z
+#    @angle = angle
+#	   @x = rand * 1000
+#		 @y = rand * 600
+    @angle = (45.5 + rand(315))
     @vel_x = @vel_y = 0.0
     @score = 0
 	end
@@ -114,6 +115,10 @@ class Drone
 
   def y
     @y
+  end
+
+  def z
+    @z
   end
 
   def angle
@@ -164,8 +169,9 @@ class Drone
   end
 
   def draw
-    img = @drone_img
-    img.draw_rot(@x, @y, ZOrder::Drone, @angle)
+#    @z = z
+    img = @spawn
+    img.draw_rot(@x, @y, @z, @angle)
 #    img.draw_rot(@x, @y, ZOrder::Drone, @angle, 1, 1, @color, :add)
 # draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
   end
@@ -248,7 +254,7 @@ class GameWindow < Gosu::Window
 
 
     if @drones.size < 1 then
-      @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (45.5 + rand(315))))
+      @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (ZOrder::Drone - 1)))
     end
 
     @drones.each do |drone|
@@ -258,9 +264,9 @@ class GameWindow < Gosu::Window
     end
 
     @drones.each do |drone|
-      if drone.score == 5000 then
+      if drone.score == 1000 then
         drone.score_reset
-        @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, drone.angle + rand(30)))
+        @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone))
 
       end
     end

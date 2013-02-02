@@ -111,6 +111,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g3.rb          # runs g4 version
       /.../g$  ruby g5.rb          # runs g5 version
       /.../g$  ruby g6.rb          # runs g6 version
+      /.../g$  ruby g7.rb          # Jon wins
 
 2.  You can get a sense of how the game is evolving so far. The drones are
     getting pretty competitive, especially Drone 3. Can you keep the drones

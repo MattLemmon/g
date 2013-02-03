@@ -5,7 +5,6 @@ module ZOrder
   Background, Stars, Player, SubDrone, Drone, UI = *0..5
 end
 
-
 #
 #    P L A Y E R    C L A S S
 #
@@ -17,6 +16,7 @@ class Player
     @image = Gosu::Image.new(@window, "media/Starfighter.3.bmp", false)
     @beep = Gosu::Sample.new(@window, "media/Beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
+    @size = @image.width / 2
     @score = 0
   end
 
@@ -56,13 +56,16 @@ class Player
     @image.draw_rot(@x, @y, ZOrder::Player, @angle)
   end
 
-  def score
-    @score
+  def collides?(galactic_object)
+    collision_size = @size + galactic_object.size
+    does_collide   = galactic_object != self
+    does_collide &&= Gosu::distance(@x, @y, galactic_object.x, galactic_object.y) < collision_size
+    does_collide
   end
 
   def collect_stars(stars)
     stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 35 then
+      if collides?(star)
         @score += 1000
         @beep.play
         true
@@ -75,7 +78,7 @@ class Player
   def collect_drones(drones)
     drones.reject! do |drone|
       dead = false
-      if Gosu::distance(@x, @y, drone.x, drone.y) < 50
+      if collides?(drone)
         drone.score -= 1
         if drone.score < 0
           @score += 5000
@@ -108,18 +111,18 @@ end
 #    D R O N E    C L A S S
 #
 class Drone
-  attr_reader :genes, :x, :y, :z, :angle, :score, :generation
+  attr_reader :genes, :x, :y, :z, :angle, :score, :generation, :size
   attr_writer :score
 
-	def initialize(window, spawn, x, y, z, genes, generation)
+  def initialize(window, spawn, x, y, z, genes, generation)
     @window = window
     @spawn = spawn
     @x = x
     @y = y
     @z = z
 #    @angle = angle
-#	   @x = rand * 1000
-#		 @y = rand * 600
+#     @x = rand * 1000
+#     @y = rand * 600
     @angle = (45.5 + rand(315))
     @vel_x = @vel_y = 0.0
     @score = 400
@@ -130,7 +133,8 @@ class Drone
       #warp:  rand(10),
     }
     @generation = generation || 1
-	end
+    @size = @spawn.width / 2
+  end
 
   def warp(x,y)
     @x, @y = x, y
@@ -189,10 +193,28 @@ class Drone
 # draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
   end
 
+  def collides?(galactic_object)
+    collision_size = @size + galactic_object.size
+    does_collide   = galactic_object != self
+    does_collide &&= Gosu::distance(@x, @y, galactic_object.x, galactic_object.y) < collision_size
+    does_collide
+  end
+
   def collect_stars(stars)
     stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 25 then
+      if collides?(star)
         @score += 100
+        true
+      else
+        false
+      end
+    end
+  end
+
+  def cannibalize_drones(drones)
+    drones.reject! do |drone|
+      if drone.score < 0 && collides?(drone)
+        @score += 300
         true
       else
         false
@@ -226,7 +248,7 @@ end
 #   S T A R    C L A S S 
 #
 class Star
-  attr_reader :x, :y
+  attr_reader :x, :y, :size
 
   def initialize(animation)
     @animation = animation
@@ -236,6 +258,7 @@ class Star
     @color.blue = rand(256 - 40) + 40
     @x = rand * 1000
     @y = rand * 600
+    @size = 10
   end
 
   def draw  
@@ -292,7 +315,7 @@ class GameWindow < Gosu::Window
     @player.collect_stars(@stars)
 
 
-    if @drones.size < 10 then
+    if @drones.size < 20 then
       @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (ZOrder::Drone - 1), nil, nil))
     end
 
@@ -303,11 +326,12 @@ class GameWindow < Gosu::Window
       drone.move
       drone.collect_stars(@stars)
       mate_drones(drone, mates)
+      drone.cannibalize_drones(@drones)
       @drones_score += drone.score
     end
 
     @player.collect_drones(@drones)
-    @drones.reject! { |drone| drone.score < -500 }
+    #@drones.reject! { |drone| drone.score < -500 }
 
     if @stars.size < 100 or rand(100) < 20 and @stars.size < 600 then
       @stars.push(Star.new(@star_anim))
@@ -315,21 +339,27 @@ class GameWindow < Gosu::Window
 
   end
 
-  
+
   def draw
-  	@player.draw
-  	
+    @player.draw
     @drones.each { |drone| drone.draw }
-    
     @background_image.draw(0, 0, ZOrder::Background)
     @stars.each { |star| star.draw }
-    #@font.draw("PLAYER: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @font.draw("#{self}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+  end
+
+  def to_s
     mature_drones_count = @drones.select{|d| d.score > 1000}.count
     dying_drones_count  = @drones.select{|d| d.score < 0}.count
     generations = 0 and @drones.each { |d| generations = [generations, d.generation].max }
-    @font.draw("PLAYER: #{@player.score}    # DRONES: #{@drones.count}     SEXUALLY MATURE: #{mature_drones_count}     DYING: #{dying_drones_count}    GENERATIONS: #{generations}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    stats = []
+    stats << "PLAYER: #{@player.score}"
+    stats << "# DRONES: #{@drones.count}"
+    stats << "SEXUALLY MATURE: #{mature_drones_count}"
+    stats << "DYING: #{dying_drones_count}"
+    stats << "GENERATIONS: #{generations}"
+    stats.join("       ")
   end
-
 
   def button_down(id)
     if id == Gosu::KbEscape

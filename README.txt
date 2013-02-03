@@ -3,7 +3,7 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .   g7                   `           * `    
+  -       `       .       .   g9                   `           * `    
          *            .            c o s m i c   s o u p        `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `    powered by gosu
@@ -115,6 +115,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g5.rb          # runs g5 version
       /.../g$  ruby g6.rb          # runs g6 version
       /.../g$  ruby g7.rb          # Jon wins
+      /.../g$  ruby g9_mjl.rb      # hot drone lovin
 
 2.  You can get a sense of how the game is evolving so far. The drones are
     getting pretty competitive, especially Drone 3. Can you keep the drones

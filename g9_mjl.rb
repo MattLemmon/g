@@ -315,7 +315,8 @@ class GameWindow < Gosu::Window
     @player.collect_stars(@stars)
 
 
-    if @drones.size < 20 then
+    generations = 0 and @drones.each { |d| generations = [generations, d.generation].max }
+    if @drones.size < 20 - generations then
       @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (ZOrder::Drone - 1), nil, nil))
     end
 
@@ -333,7 +334,7 @@ class GameWindow < Gosu::Window
     @player.collect_drones(@drones)
     #@drones.reject! { |drone| drone.score < -500 }
 
-    if @stars.size < 100 or rand(100) < 20 and @stars.size < 600 then
+    if @stars.size < 50 or rand(100) < 20 and @stars.size < 400 then
       @stars.push(Star.new(@star_anim))
     end
 

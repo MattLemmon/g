@@ -289,6 +289,8 @@ class GameWindow < Gosu::Window
     @stars = Array.new
 
     @font = Gosu::Font.new(self, Gosu::default_font_name, 20)
+
+    @needs_spawn = true
   end
 
   def mate_drones(drone, mates)
@@ -314,10 +316,9 @@ class GameWindow < Gosu::Window
     @player.move
     @player.collect_stars(@stars)
 
-
-    generations = 0 and @drones.each { |d| generations = [generations, d.generation].max }
-    if @drones.size < 20 - generations then
-      @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (ZOrder::Drone - 1), nil, nil))
+    if @needs_spawn
+      @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (ZOrder::Drone - 1), nil, nil)) while @drones.size < 20
+      @needs_spawn = false
     end
 
     mates = @drones.clone
@@ -332,9 +333,8 @@ class GameWindow < Gosu::Window
     end
 
     @player.collect_drones(@drones)
-    #@drones.reject! { |drone| drone.score < -500 }
 
-    if @stars.size < 50 or rand(100) < 20 and @stars.size < 400 then
+    if @stars.size < 50 or rand(100) < 50 and @stars.size < 400 then
       @stars.push(Star.new(@star_anim))
     end
 
@@ -359,12 +359,16 @@ class GameWindow < Gosu::Window
     stats << "SEXUALLY MATURE: #{mature_drones_count}"
     stats << "DYING: #{dying_drones_count}"
     stats << "GENERATIONS: #{generations}"
+    stats << "STARS: #{@stars.count}"
     stats.join("       ")
   end
 
   def button_down(id)
-    if id == Gosu::KbEscape
+    case id
+    when Gosu::KbEscape
       close
+    when Gosu::KbS
+      @needs_spawn = true
     end
   end
 end

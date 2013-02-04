@@ -3,7 +3,7 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .   g7                   `           * `    
+  -       `       .       .   g8                   `           * `    
          *            .            c o s m i c   s o u p        `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `    powered by gosu
@@ -21,19 +21,20 @@
 HOW TO PLAY:     `     .     *           `                 *       `
    .        .      `      *         .                   `             
   `   -                      .                    .             .  `
-  The real goal of the game is to spawn more drones.       `         .
+  We have successfully spawned more drones from the Drone class.     .
 .     *        `  .  -                  `       `       .        ,
-  Right now there are only four drones.      *     .           `      .
+  Now we need to make the drones compete with each other for survival.
  .     `         *             .   `   .  `   .        `  .        -
-  We need to create extra instances of each of the four drone classes.
+  They should starve to death and die if they don't get enough food.
     . `      .                -   .    -     `           *         .
-  How do we do this?     .            *             .           *    
+  Also, we need to find a way to make the drone spawns have different
+  movement patterns.     .            *             .           *    
  `      `                   *                  *              .    
    .        .      `       *      -                  -            .   `
 .     `         *                       *     `          *            
-  -       You win if you can help me figure this out.            `  .
-       `           *    .                   *            `            
-   *         -       J O N   W I N S  ! ! !         *         '  
+  -       You win if you can help create these changes.          `  .
+       `           *    .                   .            `            
+   *         -        ,       -      '     .        *         '  
   `        .      `         .    .      ,      `       *           .
 .      .           `      .   `                           *           
    -        .    .       `        .        .      `            .      .
@@ -111,69 +112,29 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g1.rb          # runs g1 version
       /.../g$  ruby g2.rb          # runs g2 version
       /.../g$  ruby g3.rb          # runs g3 version
-      /.../g$  ruby g3.rb          # runs g4 version
-      /.../g$  ruby g5.rb          # runs g5 version
-      /.../g$  ruby g6.rb          # runs g6 version
-      /.../g$  ruby g7.rb          # Jon wins
+      ...                          # g4, g5, etc....
 
-2.  You can get a sense of how the game is evolving so far. The drones are
-    getting pretty competitive, especially Drone 3. Can you keep the drones
-    from getting more stars than you?...
-
-    But the REAL goal of the game is to spawn more drones.
+    The game is evolving.
 
 
-3.  If we compare the different g#.rb files in a text editor, we can see 
-    how the code has grown and evolved so far.
+2.  In g5, the game gets starts to get a little difficult. The drones are
+    pretty competitive, especially Drone 3. Can you keep the drones from
+    getting more stars than you?...
 
-        g0.rb               3 classes
-           Player class
-           Star class
-           Window class            
-
-        g1.rb               4 classes
-           Player class
-           Drone class
-           Star class
-           Window class
-
-        g3.rb               6 classes
-           Player class
-           Drone class
-           Drone2 class
-           Drone3 class
-           Star class
-           Window class
-
-        g5.rb               7 classes
-           Player class
-           Drone class
-           Drone2 class
-           Drone3 class
-           Drone4 class
-           Star class
-           Window class
-
-    The Star class represents a perfect example of what I am hoping to
-    accomplish with the drones. There are tons of different stars in
-    the game, but there is only one Star class.
-
-    The individual stars are all spawned out of one, small class.
-
-    This is the great challenge of the game of GalaxyCraft - figuring
-    out how to use the Drone classes to spawn multiple drones, similar
-    to the Star class. In g6 I was able to spawn drones, but I can't
-    figure out how to get the spawned drones to move...
+    In g7, we finally had success spawning more drones from the Drone class.
+    In g8, we got them to reproduce when they eat.
 
 
-4.  Feel free to have fun with the program. Perhaps you would like to
-    create a fifth Drone class? Or perhaps you'd like to create a
-    new skin pack? Make any mods you want. You can easily change the
-    background image, the drone images, etc.
+3.  Now we need to create some basic competition for survival. We need to
+    make drones die if they don't get enough food, and create random
+    mutations in spawns.
 
 
-5.  Play around with Gosu. The tutorials and reference materials are
-    included for convenient access in    '/g/vers/gosu_lib'
+4.  Forking is encouraged!
+
+
+5.  Gosu reference materials are included for convenient access in
+    '/g/vers/gosu_lib'
     This saves you the trouble of having to dig all the way down into
     the gem folder when you want to review documentation.
 
@@ -191,21 +152,21 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 Short-term goal:
 
-   - Spawn more drones.
+   - Spawn more drones.                          (Success! Thanks to Jon!)
 
 
 Medium-term goals:
 
-   - Improve the version management system.
+   - Improve the version management system.                   (Completed.)
 
-   - Add a sound effect when drones eat stars.
+   - Add a sound effect when drones eat stars.                (Pending...)
 
-   - Add a music soundtrack.
+   - Add a music soundtrack.                                  (Pending...)
 
-   - Make it so that the drones themselves automatically spawn new
-     drones. In a word, get the drones to reproduce.
+   - Make it so that the drones themselves automatically spawn new drones.
+     In a word, get the drones to reproduce.                  (Completed.)
 
-   - Add drone character animations.
+   - Add drone character animations.                          (Pending...)
 
    - Make the overall map much, much bigger, with many, many more drones.
 
@@ -214,12 +175,12 @@ Medium-term goals:
 
 Long-term goals:
 
-   - Make the drones fight against each other for survival.
+   - Make the drones fight against each other for survival.   (Pending...)
 
    - Using stars as food, see what happens when drones compete for resources.
 
    - Create random variations, at birth of drones, which are inherited by
-     offspring, and which affect ability to gather food.
+     offspring, and which affect ability to gather food.      (Pending...)
 
    - Use extensive git forking to create many different versions of the
      program, and test all different types of parameters.
@@ -236,7 +197,7 @@ Long-term goals:
 
    - Create save states.
 
-   - Observe artificial life.
+   - Observe artificial life.                                 (Pending...)
 
 
 
@@ -244,25 +205,20 @@ Long-term goals:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-HOW TO SPAWN DRONES FROM DRONE CLASS?
+HOW TO MAKE DRONES DIE FROM STARVATION?
 
 
-  I feel like I might need to use something like:
-    @drones = Array.new
+  We might need to use something like:
 
-  along with something like:
-    if @drones.size < 10 then
-      @drones.push(Drone.new(@drone))
+    def spawn_die(drones)
+      drones.reject! do |drone|
+        if drone.score < -4000 then
+          true
+        else
+          false
+        end
+      end
     end
-
-  as well as:
-    @drones.each { |drone| drone.draw }
-
-In g6 we're halfway there...
-
-Jon made it work!
-
-Jon is the first person to beat GalaxyCraft!
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -270,6 +226,16 @@ Jon is the first person to beat GalaxyCraft!
 
 
     Thank you sincerely to jlnr for providing Gosu. It is awesome.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+                    W I N N E R S '   C I R C L E
+
+
+                                Jon
 
 
 

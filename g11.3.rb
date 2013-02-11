@@ -82,10 +82,31 @@ class Player
     if @window.button_down? Gosu::KbUp or @window.button_down? Gosu::GpButton0 then
       accelerate
     end
-    if @window.button_down? Gosu::KbDown or @window.button_down? Gosu::GpButton1 then
+    if @window.button_down? Gosu::KbDown or @window.button_down? Gosu::GpButton2 then
       brake
     end
   end
+
+  def kill_drones(drones)
+    drones.reject! do |drone|
+      if drone.food < -300 then
+        true
+      else
+        false
+      end
+    end
+  end
+
+  def kill_drones2(drones2)
+    drones2.reject! do |drone2|
+      if drone2.score < -300 then
+        true
+      else
+        false
+      end
+    end
+  end
+
 
 end
 

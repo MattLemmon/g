@@ -2,19 +2,19 @@ require 'gosu'
 
 
 module ZOrder
-  Background, Stars, Player, Drone, UI = *0..4
+  Background, Stars, SubDrone, Drone, Player, UI = *0..5
 end
 
 
 #
-#    P L A Y E R    C L A S S
+# P L A Y E R C L A S S
 #
 class Player
   attr_reader :score
 
   def initialize(window)
     @window = window
-    @image = Gosu::Image.new(@window, "media/Starfighter.2.bmp", false)
+    @image = Gosu::Image.new(@window, "media/Starfighter.3.bmp", false)
     @beep = Gosu::Sample.new(@window, "media/Beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
@@ -38,15 +38,15 @@ class Player
   end
 
   def brake
-    @vel_x = 0
-    @vel_y = 0
+    @vel_x *= 0.9
+    @vel_y *= 0.9
   end
 
   def move
     @x += @vel_x
     @y += @vel_y
     @x %= 1000
-    @y %= 600
+@y %= 600
     
     @vel_x *= 0.98
     @vel_y *= 0.98
@@ -62,7 +62,7 @@ class Player
 
   def collect_stars(stars)
     stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 35 then
+      if Gosu::distance(@x, @y, star.x, star.y) < 39 then
         @score += 1000
         @beep.play
         true
@@ -91,20 +91,39 @@ end
 
 
 #
-#    D R O N E    C L A S S
+# D R O N E C L A S S
 #
 class Drone
 
-	def initialize(window, drone_img)
+def initialize(window, spawn, x, y, z)
     @window = window
-    @drone_img = drone_img
-#		@image = Gosu::Image.new(window, "media/Drone1.1.bmp", false)
-		@x = rand * 1000
-		@y = rand * 600
+    @spawn = spawn
+    @x = x
+    @y = y
+    @z = z
+# @angle = angle
+# @x = rand * 1000
+# @y = rand * 600
+    @angle = (45.5 + rand(315))
     @vel_x = @vel_y = 0.0
-    @angle = 90.00
     @score = 0
-	end
+end
+
+  def x
+    @x
+  end
+
+  def y
+    @y
+  end
+
+  def z
+    @z
+  end
+
+  def angle
+    @angle
+  end
 
   def warp(x,y)
     @x, @y = x, y
@@ -127,29 +146,10 @@ class Drone
     @x += @vel_x
     @y += @vel_y
     @x %= 1000
-    @y %= 600
+@y %= 600
     
     @vel_x *= 0.50
     @vel_y *= 0.50
-  end
-
-
-  def draw
-    img = @drone_img
-    img.draw_rot(@x, @y, ZOrder::Drone, @angle)
-#    img.draw_rot(@x, @y, ZOrder::Drone, @angle, 1, 1, @color, :add)
-# draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
-  end
-
-  def collect_stars(stars)
-    stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 25 then
-        @score += 1000
-        true
-      else
-        false
-      end
-    end
   end
 
   def movement
@@ -168,6 +168,25 @@ class Drone
     end
   end
 
+  def draw
+# @z = z
+    img = @spawn
+    img.draw_rot(@x, @y, @z, @angle)
+# img.draw_rot(@x, @y, ZOrder::Drone, @angle, 1, 1, @color, :add)
+# draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
+  end
+
+  def collect_stars(stars)
+    stars.reject! do |star|
+      if Gosu::distance(@x, @y, star.x, star.y) < 25 then
+        @score += 1000
+        true
+      else
+        false
+      end
+    end
+  end
+
   def score
     @score
   end
@@ -175,37 +194,14 @@ class Drone
   def score_reset
     @score = 0
   end
-#  def score(drone_score)
-#    @drone_score = drone_score
-#  end
+# def score(drone_score)
+# @drone_score = drone_score
+# end
 end
 
 
-=begin
 #
-#   S C O R E   C L A S S
-#
-class Total
-
-  def initialize(total)
-    @total = total
-    @tot_score = 0
-  end
-
-  def compile
-#    @drones.each do |drone|
-    @tot_score += drone.score
-    drone.score = 0
-  end
-
-  def tot_score
-    @tot_score
-  end
-end
-=end
-
-#
-#   S T A R    C L A S S 
+# S T A R C L A S S
 #
 class Star
   attr_reader :x, :y
@@ -220,7 +216,7 @@ class Star
     @y = rand * 600
   end
 
-  def draw  
+  def draw
     img = @animation[Gosu::milliseconds / 100 % @animation.size];
     img.draw(@x - img.width / 2.0, @y - img.height / 2.0,
         ZOrder::Stars, 1, 1, @color, :add)
@@ -229,24 +225,20 @@ end
 
 
 #
-#   W I N D O W     C L A S S
+# W I N D O W C L A S S
 #
 class GameWindow < Gosu::Window
   def initialize
     super 1000, 600, false
-    self.caption = "           *  *  *  *  *    G A L A X Y   C R A F T    *  *  *  *  *                                                                                                   c o s m i c   s o u p"
-
-    @background_image = Gosu::Image.new(self, "media/Space.1.png", true)
+    self.caption = " * * * * * G A L A X Y C R A F T * * * * * c o s m i c s o u p"
+    @background_image = Gosu::Image.new(self, "media/scraps/Space5.png", true)
 
     @player = Player.new(self)
     @player.warp(500,300)
 
     @drone_img = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
-#    @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)
+# @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)
     @drones = Array.new
-
-    @tot_score = 0
-    #Total.new(@drones)
 
     @star_anim = Gosu::Image::load_tiles(self, "media/Star.png", 25, 25, false)
     @stars = Array.new
@@ -261,25 +253,32 @@ class GameWindow < Gosu::Window
     @player.collect_stars(@stars)
 
 
-    if @drones.size < 20 then
-      @drones.push(Drone.new(self, @drone_img))
+    if @drones.size < 1 then
+      @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (ZOrder::Drone - 1)))
     end
 
     @drones.each do |drone|
       drone.movement
       drone.move
       drone.collect_stars(@stars)
-      @tot_score += drone.score
-      drone.score_reset
-#      drone.score = 0
     end
-#
-#    @drones.each do |drone|
-#      if drone.score == 1000 then
-#        drone.score = 0
-#      end
-#    end    
-#
+    
+    if @drones.size <= 800 then
+      @drones.each do |drone|
+        if drone.score == 1000 then
+          drone.score_reset
+          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone))
+        end
+      end
+    end
+
+# @drones.each do |drone|
+# if drone.score == 1000 then
+# drone.score = 0
+# end
+# end
+
+
     if rand(100) < 20 and @stars.size < 400 then
       @stars.push(Star.new(@star_anim))
     end
@@ -288,19 +287,14 @@ class GameWindow < Gosu::Window
 
   
   def draw
-  	@player.draw  	
-
-    @drones.each do |drone|
-      drone.draw
-    end
-
-    @stars.each { |star| star.draw }
+   @player.draw
+  
+    @drones.each { |drone| drone.draw }
+    
     @background_image.draw(0, 0, ZOrder::Background)
-
-
-#       DRONES : #{totalScore}
-    @font.draw("      PLAYER : #{@player.score}       DRONES : #{@tot_score}", \
-      10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @stars.each { |star| star.draw }
+    @font.draw("PLAYER: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+# @font.draw("PLAYER: #{@player.score} DRONES : #{@drone.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
   end
 
 

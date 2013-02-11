@@ -81,13 +81,10 @@ class Drone
 	def initialize(droner)
     @droner = droner
 #		@image = Gosu::Image.new(window, "media/Drone1.1.bmp", false)
-    @color = Gosu::Color.new(0xff000000)
-    @color.red = rand(256 - 40) + 40
-    @color.green = rand(256 - 40) + 40
-    @color.blue = rand(256 - 40) + 40
 		@x = rand * 1000
 		@y = rand * 600
-    @vel_x = @vel_y = @angle = 0.0
+    @vel_x = @vel_y = 0.0
+    @angle = 90.00
     @score = 0
 	end
 
@@ -227,7 +224,7 @@ class GameWindow < Gosu::Window
     @player.collect_stars(@stars)
 
 
-    if @drones.size < 10 then
+    if @drones.size < 30 then
       @drones.push(Drone.new(@droner))
     end
 #

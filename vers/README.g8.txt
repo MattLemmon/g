@@ -3,10 +3,10 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .  g12.4                   `           * `    
-         *            .             c o s m i c   s o u p        `
+  -       `       .       .   g8                   `           * `    
+         *            .            c o s m i c   s o u p        `
    ,        .      `       *                     .                  `
-.     `         -              -        *     `     powered by gosu
+.     `         -              -        *     `    powered by gosu
   *       .              .            *             .                *
        `      *                             *           .     .
   `        .      .         .    .      ,      `       *           .
@@ -20,22 +20,23 @@
  .     `                  `                  .               `  .
 HOW TO PLAY:     `     .     *           `                 *       `
    .        .      `      *         .                   `             
-  `   -                      .                    .               `
-  We have successfully spawned more drones from the Drone class!     .
-.     *        `  .  -                  `       `       .        
-  We have gotten the drones to compete with each other for survival!
- .     `        '                   `      `   .        `  .        
-  They now starve to death and die if they don't get enough food.
-    . `      .                -   .    -     `                     .
-  We have succeeded in getting the drones to mate!       .           *    
- `      `                    .                 .              .    
+  `   -                      .                    .             .  `
+  We have successfully spawned more drones from the Drone class.     .
+.     *        `  .  -                  `       `       .        ,
+  Now we need to make the drones compete with each other for survival.
+ .     `         *             .   `   .  `   .        `  .        -
+  They should starve to death and die if they don't get enough food.
+    . `      .                -   .    -     `           *         .
+  Also, we need to find a way to make the drone spawns have different
+  movement patterns.     .            *             .           *    
+ `      `                   *                  *              .    
    .        .      `       *      -                  -            .   `
-.     `         *                       *     `             `            
-  -       You win if you can help create a Welcome Screen.         `  .
-       `                .                   .                         
+.     `         *                       *     `          *            
+  -       You win if you can help create these changes.          `  .
+       `           *    .                   .            `            
    *         -        ,       -      '     .        *         '  
-  `        .     *          .    .      ,      `       *           .
-.      .           `      .   `     *                     *           
+  `        .      `         .    .      ,      `       *           .
+.      .           `      .   `                           *           
    -        .    .       `        .        .      `            .      .
  .     `      `        .  `              `    .               `  .
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,10 +57,6 @@ HOW TO PLAY:     `     .     *           `                 *       `
     Arrow Keys
     Space Bar added in g1
 
-    Down Arrow added in g5
-    'S' added in g8
-    'D' added in g12.2
-
   The real control is the text editor.
 
 
@@ -72,19 +69,17 @@ HOW TO PLAY:     `     .     *           `                 *       `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1.  FIRST, install the Gosu gem.
+1.  First, install the Gosu gem.
 
           $ sudo gem install gosu
 
     Follow the detailed Gosu install instructions:
-
-         # On mac, scroll down past the C++ instructions, and follow the Ruby
-           instructions. 
-
        mac     -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-OS-X
        linux   -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
        windows -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Windows
 
+       # On mac, scroll down past the C++ instructions, and follow the Ruby
+         instructions. 
 
        # On Ubuntu with rvm I ended up using 'rvm all do gem install gosu'
          For some reason, 'rvm gem install gosu' was putting the gem in the
@@ -92,7 +87,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
          I had to install some dependency packages as well.
 
 
-2.  SECOND, copy g.git from https://github.com/MattLemmon/g.git
+2.  Second, clone g.git from https://github.com/MattLemmon/g.git
     This will give you everything you need to start playing GalaxyCraft.
 
 
@@ -127,15 +122,12 @@ HOW TO PLAY:     `     .     *           `                 *       `
     getting more stars than you?...
 
     In g7, we finally had success spawning more drones from the Drone class.
-      (Special thanks to Jon!)
-    In g8, we got them to spawn when they eat.
-    In g9, the spawns have a random speed mutation. They evolve.
-    In g11.1, different colored drones compete with each other.
-    In g12,1, we begin experimenting with sexual reproduction.
+    In g8, we got them to reproduce when they eat.
 
 
-3.  Now we need to create a welcome screen, where the player can choose to
-    complete a mission.
+3.  Now we need to create some basic competition for survival. We need to
+    make drones die if they don't get enough food, and create random
+    mutations in spawns.
 
 
 4.  Forking is encouraged!
@@ -158,9 +150,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Short-term goals:
-
-   - Create a Welcome Screen.
+Short-term goal:
 
    - Spawn more drones.                          (Success! Thanks to Jon!)
 
@@ -185,29 +175,29 @@ Medium-term goals:
 
 Long-term goals:
 
-   - Make the drones fight against each other for survival.   (Completed.)
+   - Make the drones fight against each other for survival.   (Pending...)
 
    - Using stars as food, see what happens when drones compete for resources.
-                                                              (Completed.)
+
    - Create random variations, at birth of drones, which are inherited by
-     offspring, and which affect ability to gather food.      (Completed.)
+     offspring, and which affect ability to gather food.      (Pending...)
 
    - Use extensive git forking to create many different versions of the
      program, and test all different types of parameters.
 
    - Have an adequate version management system to be able to cycle through
-     different versions and observe changes.    (Welcome Screen pending...)
+     different versions and observe changes.
 
    - Create Ant class drones with ability to communicate with pheromone
      trails.
 
    - Give some drones the ability to transport food.
 
-   - Create Predator class, which eats other drones.          (Pending...)
+   - Create Predator class, which eats other drones.
 
    - Create save states.
 
-   - Observe artificial life.                                 (Completed.)
+   - Observe artificial life.                                 (Pending...)
 
 
 
@@ -215,9 +205,20 @@ Long-term goals:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-HOW TO CREATE A WELCOME SCREEN?
+HOW TO MAKE DRONES DIE FROM STARVATION?
 
-     I have no idea....
+
+  We might need to use something like:
+
+    def spawn_die(drones)
+      drones.reject! do |drone|
+        if drone.score < -4000 then
+          true
+        else
+          false
+        end
+      end
+    end
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

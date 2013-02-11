@@ -35,7 +35,12 @@ class Player
     @vel_x += Gosu::offset_x(@angle, 0.5)
     @vel_y += Gosu::offset_y(@angle, 0.5)
   end
-  
+
+  def brake
+    @vel_x *= 0.7
+    @vel_y *= 0.7
+  end
+
   def move
     @x += @vel_x
     @y += @vel_y
@@ -89,11 +94,11 @@ class Drone1
   def turn_left
     @angle -= 2.5
   end
-  
+
   def turn_right
     @angle += 2.5
   end
-  
+
   def accelerate
     @vel_x += Gosu::offset_x(@angle, 0.7)
     @vel_y += Gosu::offset_y(@angle, 0.7)
@@ -111,7 +116,6 @@ class Drone1
 
   def draw
     @image.draw_rot(@x, @y, ZOrder::Drone1, @angle)
-
   end
 
   def collect_stars(stars)
@@ -169,8 +173,8 @@ class Drone2
     @x %= 1000
     @y %= 600
     
-    @vel_x *= 0.8
-    @vel_y *= 0.8
+    @vel_x *= 0.65
+    @vel_y *= 0.65
   end
 
 
@@ -221,12 +225,12 @@ class Drone3
   end
   
   def turn_right
-    @angle += 5.5
+    @angle += 4.5
   end
   
   def accelerate
-    @vel_x += Gosu::offset_x(@angle, 6.0)
-    @vel_y += Gosu::offset_y(@angle, 3.0)
+    @vel_x += Gosu::offset_x(@angle, 4.0)
+    @vel_y += Gosu::offset_y(@angle, 2.0)
   end
 
   def move
@@ -235,8 +239,8 @@ class Drone3
     @x %= 1000
     @y %= 600
     
-    @vel_x *= 0.20
-    @vel_y *= 0.20
+    @vel_x *= 0.30
+    @vel_y *= 0.40
   end
 
   def draw
@@ -390,6 +394,10 @@ class GameWindow < Gosu::Window
     if button_down? Gosu::KbUp or button_down? Gosu::GpButton0 then
       @player.accelerate
     end
+    if button_down? Gosu::KbDown or button_down? Gosu::GpButton1 then
+      @player.brake
+    end
+
     @player.move
     @player.collect_stars(@stars)
 
@@ -475,7 +483,8 @@ class GameWindow < Gosu::Window
     @drone4.draw
     @background_image.draw(0, 0, ZOrder::Background)
     @stars.each { |star| star.draw }
-    @font.draw("      PLAYER : #{@player.score}       DRONES : #{totalScore}                                   Drone 1 : #{@drone1.score}   Drone 2 : #{@drone2.score}   Drone 3 : #{@drone3.score}   Drone 4 : #{@drone4.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @font.draw("      PLAYER : #{@player.score}       DRONES : #{totalScore}                                   Drone 1 : #{@drone1.score}   Drone 2 : #{@drone2.score}   Drone 3 : #{@drone3.score}   Drone 4 : #{@drone4.score}", \
+      10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
 #                       ^^^ SCORING  SCORING  SCORING ^^^
   end
 

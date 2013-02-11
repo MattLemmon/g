@@ -3,8 +3,13 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .  g12.4                  `           * `    
+<<<<<<< HEAD
+  -       `       .       .  g12.4                   `           * `    
          *            .             c o s m i c   s o u p        `
+=======
+  -       `       .       .   g9                   `           * `    
+         *            .            c o s m i c   s o u p        `
+>>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce
    ,        .      `       *                     .                  `
 .     `         -              -        *     `     powered by gosu
   *       .              .            *             .                *
@@ -252,7 +257,6 @@ HOW TO CREATE A WELCOME SCREEN?
                     W I N N E R S '   C I R C L E
 
 
-                                Mike
                                 Jon
 
 

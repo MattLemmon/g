@@ -112,7 +112,15 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g1.rb          # runs g1 version
       /.../g$  ruby g2.rb          # runs g2 version
       /.../g$  ruby g3.rb          # runs g3 version
+<<<<<<< HEAD:vers/README.g8.txt
       ...                          # g4, g5, etc....
+=======
+      /.../g$  ruby g3.rb          # runs g4 version
+      /.../g$  ruby g5.rb          # runs g5 version
+      /.../g$  ruby g6.rb          # runs g6 version
+      /.../g$  ruby g7.rb          # Jon wins
+      /.../g$  ruby g9_mjl.rb      # hot drone lovin
+>>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce:README.txt
 
     The game is evolving.
 

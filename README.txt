@@ -3,10 +3,10 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .   g9                   `           * `    
-         *            .            c o s m i c   s o u p        `
+  -       `       .       .  g12.4                  `           * `    
+         *            .             c o s m i c   s o u p        `
    ,        .      `       *                     .                  `
-.     `         -              -        *     `    powered by gosu
+.     `         -              -        *     `     powered by gosu
   *       .              .            *             .                *
        `      *                             *           .     .
   `        .      .         .    .      ,      `       *           .
@@ -20,23 +20,24 @@
  .     `                  `                  .               `  .
 HOW TO PLAY:     `     .     *           `                 *       `
    .        .      `      *         .                   `             
-  `   -                      .                    .             .  `
-  We have successfully spawned more drones from the Drone class.     .
-.     *        `  .  -                  `       `       .        ,
-  Now we need to make the drones compete with each other for survival.
- .     `         *             .   `   .  `   .        `  .        -
-  They should starve to death and die if they don't get enough food.
-    . `      .                -   .    -     `           *         .
-  Also, we need to find a way to make the drone spawns have different
-  movement patterns.     .            *             .           *    
- `      `                   *                  *              .    
+  `   -                      .                    .               `
+  We have successfully spawned more drones from the Drone class!     .
+.     *        `  .  -                  `       `       .        
+  We have gotten the drones to compete with each other for survival!
+ .     `        '                   `      `   .        `  .        
+  They now starve to death and die if they don't get enough food.
+    . `      .                -   .    -     `                     .
+  We have succeeded in getting the drones to mate!       .           *    
+   `                    .                     `              .     
+  Now we need an interface which can access the different versions.
+ `      `                    .                 .              .    
    .        .      `       *      -                  -            .   `
-.     `         *                       *     `          *            
-  -       You win if you can help create these changes.          `  .
-       `           *    .                   .            `            
+.     `         *                       *     `             `            
+  -       You win if you can help create a Welcome Screen.         `  .
+       `                .                   .                         
    *         -        ,       -      '     .        *         '  
-  `        .      `         .    .      ,      `       *           .
-.      .           `      .   `                           *           
+  `        .     *          .    .      ,      `       *           .
+.      .           `      .   `     *                     *           
    -        .    .       `        .        .      `            .      .
  .     `      `        .  `              `    .               `  .
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,6 +58,10 @@ HOW TO PLAY:     `     .     *           `                 *       `
     Arrow Keys
     Space Bar added in g1
 
+    Down Arrow added in g5
+    'S' added in g8
+    'D' added in g12.2
+
   The real control is the text editor.
 
 
@@ -69,17 +74,19 @@ HOW TO PLAY:     `     .     *           `                 *       `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1.  First, install the Gosu gem.
+1.  FIRST, install the Gosu gem.
 
           $ sudo gem install gosu
 
     Follow the detailed Gosu install instructions:
+
+         # On mac, scroll down past the C++ instructions, and follow the Ruby
+           instructions. 
+
        mac     -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-OS-X
        linux   -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
        windows -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Windows
 
-       # On mac, scroll down past the C++ instructions, and follow the Ruby
-         instructions. 
 
        # On Ubuntu with rvm I ended up using 'rvm all do gem install gosu'
          For some reason, 'rvm gem install gosu' was putting the gem in the
@@ -87,7 +94,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
          I had to install some dependency packages as well.
 
 
-2.  Second, clone g.git from https://github.com/MattLemmon/g.git
+2.  SECOND, copy g.git from https://github.com/MattLemmon/g.git
     This will give you everything you need to start playing GalaxyCraft.
 
 
@@ -112,7 +119,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g1.rb          # runs g1 version
       /.../g$  ruby g2.rb          # runs g2 version
       /.../g$  ruby g3.rb          # runs g3 version
-<<<<<<< HEAD:vers/README.g8.txt
+<<<<<<< HEAD
       ...                          # g4, g5, etc....
 =======
       /.../g$  ruby g3.rb          # runs g4 version
@@ -120,7 +127,17 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g6.rb          # runs g6 version
       /.../g$  ruby g7.rb          # Jon wins
       /.../g$  ruby g9_mjl.rb      # hot drone lovin
->>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce:README.txt
+
+2.  You can get a sense of how the game is evolving so far. The drones are
+    getting pretty competitive, especially Drone 3. Can you keep the drones
+    from getting more stars than you?...
+
+    But the REAL goal of the game is to spawn more drones.
+
+
+3.  If we compare the different g#.rb files in a text editor, we can see 
+    how the code has grown and evolved so far.
+>>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce
 
     The game is evolving.
 
@@ -130,12 +147,15 @@ HOW TO PLAY:     `     .     *           `                 *       `
     getting more stars than you?...
 
     In g7, we finally had success spawning more drones from the Drone class.
-    In g8, we got them to reproduce when they eat.
+      (Special thanks to Jon!)
+    In g8, we got them to spawn when they eat.
+    In g9, the spawns have a random speed mutation. They evolve.
+    In g11.1, different colored drones compete with each other.
+    In g12,1, we begin experimenting with sexual reproduction.
 
 
-3.  Now we need to create some basic competition for survival. We need to
-    make drones die if they don't get enough food, and create random
-    mutations in spawns.
+3.  Now we need to create a welcome screen, where the player can choose to
+    complete a mission.
 
 
 4.  Forking is encouraged!
@@ -158,7 +178,9 @@ HOW TO PLAY:     `     .     *           `                 *       `
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Short-term goal:
+Short-term goals:
+
+   - Create a Welcome Screen.
 
    - Spawn more drones.                          (Success! Thanks to Jon!)
 
@@ -183,29 +205,29 @@ Medium-term goals:
 
 Long-term goals:
 
-   - Make the drones fight against each other for survival.   (Pending...)
+   - Make the drones fight against each other for survival.   (Completed.)
 
    - Using stars as food, see what happens when drones compete for resources.
-
+                                                              (Completed.)
    - Create random variations, at birth of drones, which are inherited by
-     offspring, and which affect ability to gather food.      (Pending...)
+     offspring, and which affect ability to gather food.      (Completed.)
 
    - Use extensive git forking to create many different versions of the
      program, and test all different types of parameters.
 
    - Have an adequate version management system to be able to cycle through
-     different versions and observe changes.
+     different versions and observe changes.    (Welcome Screen pending...)
 
    - Create Ant class drones with ability to communicate with pheromone
      trails.
 
    - Give some drones the ability to transport food.
 
-   - Create Predator class, which eats other drones.
+   - Create Predator class, which eats other drones.          (Pending...)
 
    - Create save states.
 
-   - Observe artificial life.                                 (Pending...)
+   - Observe artificial life.                                 (Completed.)
 
 
 
@@ -213,20 +235,12 @@ Long-term goals:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-HOW TO MAKE DRONES DIE FROM STARVATION?
+HOW TO CREATE A WELCOME SCREEN?
 
+     I have no idea...
 
-  We might need to use something like:
-
-    def spawn_die(drones)
-      drones.reject! do |drone|
-        if drone.score < -4000 then
-          true
-        else
-          false
-        end
-      end
-    end
+     I think we need to create a separate ruby file which accesses the
+     g#.rb files.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,9 +256,9 @@ HOW TO MAKE DRONES DIE FROM STARVATION?
 
                     W I N N E R S '   C I R C L E
 
+                                Mike
 
                                 Jon
-
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

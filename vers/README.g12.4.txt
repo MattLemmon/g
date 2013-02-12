@@ -28,6 +28,8 @@ HOW TO PLAY:     `     .     *           `                 *       `
   They now starve to death and die if they don't get enough food.
     . `      .                -   .    -     `                     .
   We have succeeded in getting the drones to mate!       .           *    
+   `                    .                     `              .     
+  Now we need an interface which can access the different versions.
  `      `                    .                 .              .    
    .        .      `       *      -                  -            .   `
 .     `         *                       *     `             `            
@@ -235,7 +237,10 @@ Long-term goals:
 
 HOW TO CREATE A WELCOME SCREEN?
 
-     I have no idea....
+     I have no idea...
+
+     I think we need to create a separate ruby file which accesses the
+     g#.rb files.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,10 +256,9 @@ HOW TO CREATE A WELCOME SCREEN?
 
                     W I N N E R S '   C I R C L E
 
-
                                 Mike
-                                Jon
 
+                                Jon
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

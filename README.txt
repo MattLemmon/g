@@ -3,15 +3,16 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-  -       `       .       .  g12.4                  `           * `    
-         *            .             c o s m i c   s o u p        `
+`         `       .       .  g12.4                  `           * `    
+     .      `   `         g9.mjl g9.2        `          `
+         *            .                c o s m i c   s o u p     `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `     powered by gosu
   *       .              .            *             .                *
-       `      *                             *           .     .
-  `        .      .         .    .      ,      `       *           .
-   ,        `    .       `        .        .      `            .      .
-.      `      `        .   `   *         `    -               `  .
+       `      *               `             *           .     .
+  `        .       .             .      ,      `       *           .
+   ,        `            `        .        .      `            .     .
+.      `      `        .   `   *         `    -             .-`  .
     GalaxyCraft is a game         .        .      .     .            `  
  `  for studying artificial     .    .             `               .
   . life and evolution            `      .   `           `      .   `    
@@ -137,7 +138,8 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 3.  If we compare the different g#.rb files in a text editor, we can see 
     how the code has grown and evolved so far.
->>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce
+
+>>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce                (git fart)
 
     The game is evolving.
 
@@ -151,7 +153,8 @@ HOW TO PLAY:     `     .     *           `                 *       `
     In g8, we got them to spawn when they eat.
     In g9, the spawns have a random speed mutation. They evolve.
     In g11.1, different colored drones compete with each other.
-    In g12,1, we begin experimenting with sexual reproduction.
+    In g12.1, we begin experimenting with sexual reproduction.
+    g9_mjl and g9.2 have now been added, with sexual reproduction.
 
 
 3.  Now we need to create a welcome screen, where the player can choose to
@@ -182,7 +185,9 @@ Short-term goals:
 
    - Create a Welcome Screen.
 
-   - Spawn more drones.                          (Success! Thanks to Jon!)
+   - Get Drones to mate.                                      (Completed.)
+
+   - Spawn more drones.                                       (Completed.)
 
 
 Medium-term goals:
@@ -216,7 +221,8 @@ Long-term goals:
      program, and test all different types of parameters.
 
    - Have an adequate version management system to be able to cycle through
-     different versions and observe changes.    (Welcome Screen pending...)
+     different versions and observe changes.
+                                               (Welcome Screen pending...)
 
    - Create Ant class drones with ability to communicate with pheromone
      trails.
@@ -239,8 +245,8 @@ HOW TO CREATE A WELCOME SCREEN?
 
      I have no idea...
 
-     I think we need to create a separate ruby file which accesses the
-     g#.rb files.
+     I think we might need to create a separate ruby file which accesses
+     the g#.rb files.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

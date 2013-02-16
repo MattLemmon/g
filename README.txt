@@ -253,8 +253,24 @@ HOW TO CREATE A WELCOME SCREEN?
      the g#.rb files.
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+WELCOME SCREEN MOCKUP:
 
+
+     Welcome to GalaxyCraft! Select your mission:
+
+      [x]  g1
+      [ ]  g2
+      [ ]  g3
+      [ ]  g4
+      [ ]  g5
+      [ ]  g6
+      [ ]  ...
+
+    Press 'enter' when you have selected the desired mission.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
     Thank you sincerely to jlnr for providing Gosu. It is awesome.
@@ -269,6 +285,7 @@ HOW TO CREATE A WELCOME SCREEN?
                                 Mike
 
                                 Jon
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -89,7 +89,7 @@ class Player
 
   def kill_drones(drones)
     drones.reject! do |drone|
-      if drone.food < -300 then
+      if drone.food < -700 then
         true
       else
         false
@@ -120,6 +120,7 @@ class Drone
     @vel_x = @vel_y = 0.0
     @score = 0
     @food = 0
+    @mate = 0
 	end
 
   def x
@@ -198,6 +199,28 @@ class Drone
     end
   end
 
+  def reproduce(drones2)
+    drones2.each do |drone|
+      if Gosu::distance(@x, @y, drone.x, drone.y) < 40 and rand(15) < 3 then
+      @mate = 1
+      else
+      @mate = 0
+      end
+    end
+  end
+
+#        if rand(2) == 1 then
+#          @drones2.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+#        else
+#          @drones.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+#        end
+
+
+  def mate
+    @mate
+  end
   def score
     @score
   end
@@ -208,7 +231,7 @@ class Drone
     @food
   end
   def hunger
-    @food = @food -1
+    @food -= 1
   end
 
 #  def die(drones)
@@ -258,8 +281,15 @@ class GameWindow < Gosu::Window
     @drone_img = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
     @drones = Array.new
 #    @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)
-    @drone_img2 = Gosu::Image.new(self, "media/Drone1.3.bmp", false)
+    @drone_img2 = Gosu::Image.new(self, "media/Drone1.2.bmp", false)
     @drones2 = Array.new
+
+    @drone_img3 = Gosu::Image.new(self, "media/Drone1.3.bmp", false)
+    @drones3 = Array.new
+
+    @drone_img4 = Gosu::Image.new(self, "media/Drone1.4.bmp", false)
+    @drones4 = Array.new
+
 
     @tot_score = 0
     @tot_score2 = 0
@@ -277,13 +307,13 @@ class GameWindow < Gosu::Window
     @player.kill_drones(@drones)
     @player.kill_drones(@drones2)
 
-    if @drones.size < 2 and @drones2.size < 15 then
+    if ( @drones.size < 3 and @drones2.size < 15 ) and ( @drones2.size < 3 and @drones.size < 15 ) then
       @drones.push(Drone.new(self, @drone_img, rand(1200), rand(800), ZOrder::Drone, 1.00))
-    end
-
-    if @drones2.size < 2 and @drones.size < 15 then
       @drones2.push(Drone.new(self, @drone_img2, rand(1200), rand(800), ZOrder::Drone, 1.00))
     end
+
+#    if @drones2.size < 2 and @drones.size < 15 then
+#    end
 
     @drones.each do |drone|
       drone.movement
@@ -291,6 +321,12 @@ class GameWindow < Gosu::Window
       drone.collect_stars(@stars)
       drone.hunger
       @tot_score += drone.score
+      drone.reproduce(@drones2)
+      if drone.mate == 1 and @drones.size < 600 then
+        @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+          ((drone.veloz + rand(100) / 400.00) * 1.10)))
+        drone.score_reset
+      end
     end
 
     @drones2.each do |drone|
@@ -301,9 +337,44 @@ class GameWindow < Gosu::Window
       @tot_score2 += drone.score
     end
 
+#    @drones.each do |drone|
+#      drone.reproduce
+
+
+#
+#
+# This is where I'm trying to get the drones to mate.
+=begin
+    @drones.each do |drone|
+      if Gosu::distance(@x, @y, drone.x, drone.y) < 25 then
+        if rand(2) == 1 then
+          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+        else
+          @drones.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
+            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+        end
+      end
+    end
+=end
+
+=begin
+  def collect_stars(stars)
+    stars.reject! do |star|
+      if Gosu::distance(@x, @y, star.x, star.y) < 25 then
+        @score += 1000
+        @food += 1000
+        true        
+      else
+        false
+      end
+    end
+  end
+=end
+
 
     @drones.each do |drone|
-      if rand(30) == 5 and drone.score != 0 then
+      if rand(30) == 5 and drone.score >= 2000 then
         drone.score_reset
         if rand(2) == 1 then
           @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
@@ -316,7 +387,7 @@ class GameWindow < Gosu::Window
     end
 
     @drones2.each do |drone|
-      if rand(30) == 5 and drone.score != 0 then
+      if rand(30) == 5 and drone.score >= 2000 then
         drone.score_reset
         if rand(2) == 1 then
           @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
@@ -357,7 +428,7 @@ class GameWindow < Gosu::Window
     @drones2.each { |drone| drone.draw }
     @stars.each { |star| star.draw }    
     @background_image.draw(0, 0, ZOrder::Background)
-    @font.draw("    Score:      WHITE  #{@tot_score}  GREY  #{@tot_score2}       Population:    WHITE  #{@drones.size}     GREY  #{@drones2.size}      STARS  #{@stars.size}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @font.draw("           Population:   GREEN #{@drones.size}   PINK #{@drones2.size}   STARS #{@stars.size}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
 #    @font.draw("PLAYER: #{@player.score}     DRONES : #{@drone.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
   end
 

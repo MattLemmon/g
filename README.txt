@@ -3,9 +3,8 @@
        `           *           `     '       .           -        .
   `          *             .                   *           .          .
  .   G A L A X Y C R A F T             .      `         .
-`         `       .       .  g12.4                  `           * `    
-     .      `   `         g9.mjl g9.2        `          `
-         *            .                c o s m i c   s o u p     `
+`         `       .       .    g13                   `           * `    
+         *            .               c o s m i c   s o u p     `
    ,        .      `       *                     .                  `
 .     `         -              -        *     `     powered by gosu
   *       .              .            *             .                *
@@ -70,32 +69,32 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 
                      I N S T A L L A T I O N
-                                                         requires Ruby
+                                                    requires Ruby Gems
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 1.  FIRST, install the Gosu gem.
 
-          $ sudo gem install gosu
+        $ sudo gem install gosu
 
-    Follow the detailed Gosu install instructions:
+    Following are the detailed Gosu install instructions:
 
-         # On mac, scroll down past the C++ instructions, and follow the Ruby
-           instructions. 
+        #  On mac, scroll down past the C++ instructions, and follow the
+        #  Ruby instructions. 
 
-       mac     -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-OS-X
-       linux   -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
-       windows -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Windows
+      mac     -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-OS-X
+      linux   -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
+      windows -  https://github.com/jlnr/gosu/wiki/Getting-Started-on-Windows
 
-
-       # On Ubuntu with rvm I ended up using 'rvm all do gem install gosu'
-         For some reason, 'rvm gem install gosu' was putting the gem in the
-         wrong folder, but it worked fine with 'rvm all do'
-         I had to install some dependency packages as well.
+        #  On Ubuntu with rvm I ended up using 'rvm all do gem install gosu'
+        #  For some reason, 'rvm gem install gosu' was putting the gem in
+        #  wrong folder, but it worked fine with 'rvm all do'
+        #  I had to install some dependency packages as well.
 
 
 2.  SECOND, copy g.git from https://github.com/MattLemmon/g.git
+
     This will give you everything you need to start playing GalaxyCraft.
 
 
@@ -112,7 +111,7 @@ HOW TO PLAY:     `     .     *           `                 *       `
 
 1.  In the terminal, cd to /g and type 'ruby g0.rb'
 
-      /.../g$  ruby g0.rb           # runs g0  zero version 
+      /.../g$  ruby g0.rb          # runs g0  zero version 
 
     The zero version is the Gosu tutorial game which comes built-in with
     the gem.
@@ -120,52 +119,57 @@ HOW TO PLAY:     `     .     *           `                 *       `
       /.../g$  ruby g1.rb          # runs g1 version
       /.../g$  ruby g2.rb          # runs g2 version
       /.../g$  ruby g3.rb          # runs g3 version
-<<<<<<< HEAD
       ...                          # g4, g5, etc....
-=======
-      /.../g$  ruby g3.rb          # runs g4 version
-      /.../g$  ruby g5.rb          # runs g5 version
-      /.../g$  ruby g6.rb          # runs g6 version
-      /.../g$  ruby g7.rb          # Jon wins
-      /.../g$  ruby g9_mjl.rb      # hot drone lovin
-
-2.  You can get a sense of how the game is evolving so far. The drones are
-    getting pretty competitive, especially Drone 3. Can you keep the drones
-    from getting more stars than you?...
-
-    But the REAL goal of the game is to spawn more drones.
 
 
-3.  If we compare the different g#.rb files in a text editor, we can see 
-    how the code has grown and evolved so far.
+2.  MINI-GAMES:
 
->>>>>>> 924c68b241eb9628ed782a62872ba7f9018e88ce                (git fart)
+      g5:   Try to get more points than the drones.
+
+      g8:   Try to get at least 150,000 points.
+            Hard challenge: try to get 200,000 points on g8.
+
+      g9:   Observe how the slow drones die and the fast drones survive,
+            resulting in "survival of the fittest," and continual
+            increases in speed.
+
+      g11:  Try to guess whether grey or white will win.
+
+      g13:  Try to guess whether grey or white will win.
 
     The game is evolving.
 
 
-2.  In g5, the game gets starts to get a little difficult. The drones are
-    pretty competitive, especially Drone 3. Can you keep the drones from
-    getting more stars than you?...
+3.  VERSION NOTES:
+
+    In g5, the drones are pretty competitive, especially Drone 3.
 
     In g7, we finally had success spawning more drones from the Drone class.
-      (Special thanks to Jon!)
-    In g8, we got them to spawn when they eat.
+                                               (Special thanks to Jon!)
+    In g8, we got the drones to spawn when they eat.
+
     In g9, the spawns have a random speed mutation. They evolve.
-    In g11.1, different colored drones compete with each other.
-    In g12.1, we begin experimenting with sexual reproduction.
-    g9_mjl and g9.2 have now been added, with sexual reproduction.
+
+    In g11, different colored drones compete with each other.
+
+    In g12, we begin experiment with sexual reproduction.
+
+    g9_mjl and g10 have different algorithms than the other versions.
+
+    Additional sub-versions, and previous READMEs, are included in the 'vers' folder.
 
 
-3.  Now we need to create a welcome screen, where the player can choose to
-    complete a mission.
+4.  Now we need to create a welcome screen, where the player has the
+    option of loading different versions.
 
 
-4.  Forking is encouraged!
+5.  Forking is encouraged!
 
 
-5.  Gosu reference materials are included for convenient access in
-    '/g/vers/gosu_lib'
+6.  Gosu reference materials are included for convenient access in
+
+                            g/gosu/
+
     This saves you the trouble of having to dig all the way down into
     the gem folder when you want to review documentation.
 

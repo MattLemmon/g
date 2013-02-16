@@ -87,6 +87,7 @@ class Player
     end
   end
 
+#######   S T A R V A T I O N   #################################
   def kill_drones(drones)
     drones.reject! do |drone|
       if drone.food < -300 then
@@ -116,11 +117,12 @@ class Drone
 #    @angle = angle
 #	   @x = rand * 1000
 #		 @y = rand * 600
-    @angle = (45.5 + rand(315))
+    @angle = (45.0 + rand(315))
     @vel_x = @vel_y = 0.0
     @score = 0
     @food = 0
     @mate = 0
+    @mate_scr = 0.0
 	end
 
   def x
@@ -192,6 +194,7 @@ class Drone
       if Gosu::distance(@x, @y, star.x, star.y) < 25 then
         @score += 1000
         @food += 1000
+        @mate_scr += 1000.0
         true        
       else
         false
@@ -199,9 +202,12 @@ class Drone
     end
   end
 
+
+#######  M A T I N G  ##########
+
   def reproduce(drones2)
     drones2.each do |drone|
-      if Gosu::distance(@x, @y, drone.x, drone.y) < 25 and rand(10) <= 2 then
+      if Gosu::distance(@x, @y, drone.x, drone.y) < 120
       @mate = 1
       else
       @mate = 0
@@ -221,6 +227,12 @@ class Drone
   def mate
     @mate
   end
+  def mate_scr
+    @mate_scr
+  end
+  def mate_scr_rst
+    @mate_scr = 0
+  end
   def score
     @score
   end
@@ -230,8 +242,10 @@ class Drone
   def food
     @food
   end
+#---------------------------------   h u n g e r   ------------------------
   def hunger
-    @food = @food -1
+    @food -= 1
+#    @mate_scr -= 0.1
   end
 
 #  def die(drones)
@@ -267,7 +281,7 @@ end
 
 
 #
-#   W I N D O W     C L A S S      W I N D O W   C L A S S   WINDOW CLASS
+#   W I N D O W     C L A S S      W I N D O W   C L A S S   WINDOW CLASS   W  W  W  W 
 #
 class GameWindow < Gosu::Window
   def initialize
@@ -278,18 +292,17 @@ class GameWindow < Gosu::Window
     @player = Player.new(self)
     @player.warp(600,400)
 
-    @drone_img = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
+    @drone_img = Gosu::Image.new(self, "media/Drone1.2.bmp", false)
     @drones = Array.new
 #    @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)
-    @drone_img2 = Gosu::Image.new(self, "media/Drone1.2.bmp", false)
+    @drone_img2 = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
     @drones2 = Array.new
 
-    @drone_img3 = Gosu::Image.new(self, "media/Drone1.3.bmp", false)
+    @drone_img3 = Gosu::Image.new(self, "media/Drone1.4.bmp", false)
     @drones3 = Array.new
 
-    @drone_img4 = Gosu::Image.new(self, "media/Drone1.4.bmp", false)
+    @drone_img4 = Gosu::Image.new(self, "media/Drone1.3.bmp", false)
     @drones4 = Array.new
-
 
     @tot_score = 0
     @tot_score2 = 0
@@ -306,26 +319,59 @@ class GameWindow < Gosu::Window
     @player.collect_stars(@stars)
     @player.kill_drones(@drones)
     @player.kill_drones(@drones2)
-
-    if ( @drones.size < 2 and @drones2.size < 15 ) and ( @drones2.size < 2 and @drones.size < 15 ) then
+    @player.kill_drones(@drones3)
+    @player.kill_drones(@drones4)
+########################################### PUSH STARTING DRONES #########################
+    if ( @drones.size + @drones2.size < 5 and @drones3.size + @drones4.size < 15 ) and \
+       ( @drones3.size + @drones4.size < 5 and @drones.size + @drones2.size < 15 ) then
       @drones.push(Drone.new(self, @drone_img, rand(1200), rand(800), ZOrder::Drone, 1.00))
       @drones2.push(Drone.new(self, @drone_img2, rand(1200), rand(800), ZOrder::Drone, 1.00))
+      @drones3.push(Drone.new(self, @drone_img3, rand(1200), rand(800), ZOrder::Drone, 1.00))
+      @drones4.push(Drone.new(self, @drone_img4, rand(1200), rand(800), ZOrder::Drone, 1.00))
     end
 
 #    if @drones2.size < 2 and @drones.size < 15 then
 #    end
-
+############   P U S H    W H I T E    D R O N E S   ############## WH WH WH WH WH
     @drones.each do |drone|
       drone.movement
       drone.move
       drone.collect_stars(@stars)
       drone.hunger
       @tot_score += drone.score
+      drone.score_reset
       drone.reproduce(@drones2)
-      if drone.mate == 1 and @drones.size < 800 then
-        @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
-          ((drone.veloz + rand(100) / 300.00) * 1.12)))
+#     and rand(70) <= 2 then
+      if drone.mate == 1 and drone.mate_scr >= 1000 and @drones.size < 400 then
+        drone.mate_scr_rst
+        if rand(4) == 1 then
+          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+        else
+          if rand(3) == 1 then
+            @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+              ((drone.veloz + rand(100) / 300.00) * 0.88)))
+          else
+            if rand(2) == 1 then
+              @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
+                ((drone.veloz + rand(100) / 300.00) * 1.12)))
+            else
+              @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
+                ((drone.veloz + rand(100) / 300.00) * 0.88)))
+            end
+          end
+        end
       end
+#      if rand(30) == 5 and drone.mate_scr >= 900 then
+#        drone.mate_scr_rst
+#        if rand(2) == 1 then
+#          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+#        else
+#          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz - rand(100) / 300.00 ) * 0.88)))
+#        end
+#      end
     end
 
     @drones2.each do |drone|
@@ -333,8 +379,20 @@ class GameWindow < Gosu::Window
       drone.move
       drone.collect_stars(@stars)
       drone.hunger
-      @tot_score2 += drone.score
+      @tot_score += drone.score
+      drone.score_reset
+#      if rand(30) == 5 and drone.mate_scr >= 900 then
+#        drone.mate_scr_rst
+#        if rand(2) == 1 then
+#          @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+#        else
+#          @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz - rand(100) / 300.00 ) * 0.88)))
+#        end
+#      end
     end
+
 
 #    @drones.each do |drone|
 #      drone.reproduce
@@ -372,33 +430,18 @@ class GameWindow < Gosu::Window
 =end
 
 
-    @drones.each do |drone|
-      if rand(30) == 5 and drone.score != 0 then
-        drone.score_reset
-        if rand(2) == 1 then
-          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
-            ((drone.veloz + rand(100) / 300.00) * 1.12)))
-        else
-          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
-            ((drone.veloz - rand(100) / 300.00 ) * 0.88)))
-        end
-      end
-    end
-
-    @drones2.each do |drone|
-      if rand(30) == 5 and drone.score != 0 then
-        drone.score_reset
-        if rand(2) == 1 then
-          @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
-            ((drone.veloz + rand(100) / 300.00) * 1.12)))
-        else
-          @drones2.push(Drone.new(self, @drone_img2, drone.x, drone.y, ZOrder::SubDrone, \
-            ((drone.veloz - rand(100) / 300.00 ) * 0.88)))
-        end
-      end
-    end
-
-
+#    @drones.each do |drone|
+#      if rand(30) == 5 and drone.score != 0 then
+#        drone.score_reset
+#        if rand(2) == 1 then
+#          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+#        else
+#          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+#            ((drone.veloz - rand(100) / 300.00 ) * 0.88)))
+#        end
+#      end
+#    end
 #
 #        if drone.score < -150 then
 #          drone.die(@drones)
@@ -406,17 +449,75 @@ class GameWindow < Gosu::Window
 #
 
 
-    if @drones.size < 4 and @drones2.size < 4 and @stars.size < 70 then
+
+############   P U S H    G R E Y   D R O N E S   ############## G G G
+    @drones3.each do |drone|
+      drone.movement
+      drone.move
+      drone.collect_stars(@stars)
+      drone.hunger
+      @tot_score2 += drone.score
+      drone.score_reset
+      drone.reproduce(@drones4)
+#     and rand(70) <= 2 then
+      if drone.mate == 1 and drone.mate_scr >= 400 and @drones3.size < 400 then
+        drone.mate_scr_rst
+        if rand(4) == 1 then
+          @drones3.push(Drone.new(self, @drone_img3, drone.x, drone.y, ZOrder::SubDrone, \
+            ((drone.veloz + rand(100) / 300.00) * 1.12)))
+        else
+          if rand(3) == 1 then
+            @drones3.push(Drone.new(self, @drone_img3, drone.x, drone.y, ZOrder::SubDrone, \
+              ((drone.veloz + rand(100) / 300.00) * 0.88)))
+          else
+            if rand(2) == 1 then
+              @drones4.push(Drone.new(self, @drone_img4, drone.x, drone.y, ZOrder::SubDrone, \
+                ((drone.veloz + rand(100) / 300.00) * 1.12)))
+            else
+              @drones4.push(Drone.new(self, @drone_img4, drone.x, drone.y, ZOrder::SubDrone, \
+                ((drone.veloz + rand(100) / 300.00) * 0.88)))
+            end
+          end
+        end
+      end
+    end
+
+    @drones4.each do |drone|
+      drone.movement
+      drone.move
+      drone.collect_stars(@stars)
+      drone.hunger
+      @tot_score2 += drone.score
+      drone.score_reset
+    end
+
+
+
+
+
+    if button_down? Gosu::KbD then
+      @drones.push(Drone.new(self, @drone_img, rand(1200), rand(800), ZOrder::Drone, 1.00))
+      @drones2.push(Drone.new(self, @drone_img2, rand(1200), rand(800), ZOrder::Drone, 1.00))
+      @drones3.push(Drone.new(self, @drone_img3, rand(1200), rand(800), ZOrder::Drone, 1.00))
+      @drones4.push(Drone.new(self, @drone_img4, rand(1200), rand(800), ZOrder::Drone, 1.00))
+    end
+
+
+
+#######  P U S H   S T A R S   ############
+    if @drones.size < 15 and @drones2.size < 15 and @stars.size < 90 then
       @stars.push(Star.new(@star_anim))
     end
 
-    if rand(100) <= 3 and @stars.size < 150 then
+    if rand(100) <= 4 and @stars.size < 300 then
       @stars.push(Star.new(@star_anim))
     end
 
     if button_down? Gosu::KbS then
       @stars.push(Star.new(@star_anim))
     end
+#############################################
+
 
   end
 
@@ -425,9 +526,12 @@ class GameWindow < Gosu::Window
   	@player.draw
     @drones.each { |drone| drone.draw }
     @drones2.each { |drone| drone.draw }
+    @drones3.each { |drone| drone.draw }
+    @drones4.each { |drone| drone.draw }
     @stars.each { |star| star.draw }    
     @background_image.draw(0, 0, ZOrder::Background)
-    @font.draw("    Score:      WHITE  #{@tot_score}  GREY  #{@tot_score2}       Population:    WHITE  #{@drones.size}     GREY  #{@drones2.size}      STARS  #{@stars.size}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @font.draw("    Score:   WHITE #{@tot_score}   GREY #{@tot_score2} \
+            Population:   WHITE #{@drones.size + @drones2.size}   GREY #{@drones3.size + @drones4.size}   STARS #{@stars.size}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
 #    @font.draw("PLAYER: #{@player.score}     DRONES : #{@drone.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
   end
 

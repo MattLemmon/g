@@ -2,7 +2,7 @@ require 'gosu'
 
 
 module ZOrder
-  Background, Stars, Player, Drone, UI = *0..4
+  Background, Stars, SubDrone, Drone, Player, UI = *0..5
 end
 
 
@@ -14,7 +14,7 @@ class Player
 
   def initialize(window)
     @window = window
-    @image = Gosu::Image.new(@window, "media/Starfighter.3.bmp", false)
+    @image = Gosu::Image.new(@window, "media/Starfighter.4.bmp", false)
     @beep = Gosu::Sample.new(@window, "media/Beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
@@ -45,8 +45,8 @@ class Player
   def move
     @x += @vel_x
     @y += @vel_y
-    @x %= 1000
-    @y %= 600
+    @x %= 1200
+    @y %= 800
     
     @vel_x *= 0.98
     @vel_y *= 0.98
@@ -62,7 +62,7 @@ class Player
 
   def collect_stars(stars)
     stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 35 then
+      if Gosu::distance(@x, @y, star.x, star.y) < 43 then
         @score += 1000
         @beep.play
         true
@@ -87,6 +87,17 @@ class Player
     end
   end
 
+  def kill_drones(drones)
+    drones.reject! do |drone|
+      if drone.score < -270
+#        or Gosu::distance(@x, @y, drone.x, drone.y) < 43 then
+        true
+      else
+        false
+      end
+    end
+  end
+
 end
 
 
@@ -95,15 +106,19 @@ end
 #
 class Drone
 
-	def initialize(window, drone_img, x, y, angle)
+	def initialize(window, spawn, x, y, z, veloz, left, right)
     @window = window
-    @drone_img = drone_img
+    @spawn = spawn
     @x = x
     @y = y
-    @angle = angle
-#		@x = rand * 1000
-#		@y = rand * 600
-#   @angle = (45.5 + rand(315))
+    @z = z
+    @veloz = veloz
+    @left = left
+    @right = right
+#    @angle = angle
+#	   @x = rand * 1000
+#		 @y = rand * 600
+    @angle = (45.5 + rand(315))
     @vel_x = @vel_y = 0.0
     @score = 0
 	end
@@ -116,6 +131,22 @@ class Drone
     @y
   end
 
+  def z
+    @z
+  end
+
+  def veloz
+    @veloz
+  end
+
+  def left
+    @left
+  end
+
+  def right
+    @right
+  end
+
   def angle
     @angle
   end
@@ -125,26 +156,26 @@ class Drone
   end
 
   def turn_left
-    @angle -= 2.5
+    @angle -= left
   end
   
   def turn_right
-    @angle += 2.5
+    @angle += right
   end
   
   def accelerate
-    @vel_x += Gosu::offset_x(@angle, 0.5)
-    @vel_y += Gosu::offset_y(@angle, 0.5)
+    @vel_x += Gosu::offset_x(@angle, veloz)
+    @vel_y += Gosu::offset_y(@angle, veloz)
   end
 
   def move
     @x += @vel_x
     @y += @vel_y
-    @x %= 1000
-    @y %= 600
+    @x %= 1200
+    @y %= 800
     
-    @vel_x *= 0.50
-    @vel_y *= 0.50
+    @vel_x *= 0.70
+    @vel_y *= 0.70
   end
 
   def movement
@@ -159,13 +190,14 @@ class Drone
       accelerate
     end
     if @window.button_down? Gosu::KbSpace then
-      warp(rand(1000), rand(600))
+      warp(rand(1200), rand(800))
     end
   end
 
   def draw
-    img = @drone_img
-    img.draw_rot(@x, @y, ZOrder::Drone, @angle)
+#    @z = z
+    img = @spawn
+    img.draw_rot(@x, @y, @z, @angle)
 #    img.draw_rot(@x, @y, ZOrder::Drone, @angle, 1, 1, @color, :add)
 # draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
   end
@@ -186,11 +218,18 @@ class Drone
   end
 
   def score_reset
-    @score = 0
+    @score -= 1100
   end
-#  def score(drone_score)
-#    @drone_score = drone_score
+
+  def hunger
+    @score = @score -1
+  end
+
+#  def die(drones)
+#    drones.reject! do |drone|
+#    end
 #  end
+
 end
 
 
@@ -206,8 +245,8 @@ class Star
     @color.red = rand(256 - 40) + 40
     @color.green = rand(256 - 40) + 40
     @color.blue = rand(256 - 40) + 40
-    @x = rand * 1000
-    @y = rand * 600
+    @x = rand * 1200
+    @y = rand * 800
   end
 
   def draw  
@@ -223,12 +262,12 @@ end
 #
 class GameWindow < Gosu::Window
   def initialize
-    super 1000, 600, false
+    super 1200, 800, false
     self.caption = "           *  *  *  *  *    G A L A X Y   C R A F T    *  *  *  *  *                                                                                                   c o s m i c   s o u p"
-    @background_image = Gosu::Image.new(self, "media/scraps/Space5.png", true)
+    @background_image = Gosu::Image.new(self, "media/Space.6.png", true)
 
     @player = Player.new(self)
-    @player.warp(500,300)
+    @player.warp(600,400)
 
     @drone_img = Gosu::Image.new(self, "media/Drone1.1.bmp", false)
 #    @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)
@@ -245,34 +284,52 @@ class GameWindow < Gosu::Window
     @player.movement
     @player.move
     @player.collect_stars(@stars)
-
+    @player.kill_drones(@drones)
 
     if @drones.size < 1 then
-      @drones.push(Drone.new(self, @drone_img, rand(1000), rand(600), (45.5 + rand(315))))
+      @drones.push(Drone.new(self, @drone_img, rand(1200), rand(800), ZOrder::Drone, 0.45, 2.5, 2.5))
     end
 
     @drones.each do |drone|
       drone.movement
       drone.move
       drone.collect_stars(@stars)
+      drone.hunger
     end
+    
 
     @drones.each do |drone|
-      if drone.score == 5000 then
+      if rand(30) == 5 and drone.score >= 1500 then
         drone.score_reset
-        @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, drone.angle + rand(30)))
-
+        if rand(4) == 1 then
+          @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+            ((drone.veloz + rand(100) / 500.00) * 1.12), (drone.left + rand(100) / 125), \
+            (drone.right + rand(100) / 125)))
+        else
+          if rand(3) == 1 then
+            @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+              ((drone.veloz + rand(100) / 500.00) * 1.12), (drone.left - rand(100) / 125), \
+              (drone.right - rand(100) / 125)))
+          else
+            if rand(2) == 1 then
+              @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+                ((drone.veloz - rand(100) / 500.00 ) * 0.88), (drone.left + rand(100) / 125), \
+                (drone.right + rand(100) / 125)))
+            else
+              @drones.push(Drone.new(self, @drone_img, drone.x, drone.y, ZOrder::SubDrone, \
+                ((drone.veloz - rand(100) / 500.00 ) * 0.88), (drone.left - rand(100) / 125), \
+                (drone.right - rand(100) / 125)))
+            end
+          end
+        end
       end
     end
 
-#    @drones.each do |drone|
-#      if drone.score == 1000 then
-#        drone.score = 0
-#      end
-#    end
+    if rand(100) < 4 and @stars.size < 150 then
+      @stars.push(Star.new(@star_anim))
+    end
 
-
-    if rand(100) < 20 and @stars.size < 400 then
+    if button_down? Gosu::KbS then
       @stars.push(Star.new(@star_anim))
     end
 
@@ -281,12 +338,10 @@ class GameWindow < Gosu::Window
   
   def draw
   	@player.draw
-  	
     @drones.each { |drone| drone.draw }
-    
+    @stars.each { |star| star.draw }    
     @background_image.draw(0, 0, ZOrder::Background)
-    @stars.each { |star| star.draw }
-    @font.draw("PLAYER: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @font.draw("PLAYER: #{@player.score}        Num Drones: #{@drones.size}      Num Stars: #{@stars.size}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
 #    @font.draw("PLAYER: #{@player.score}     DRONES : #{@drone.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
   end
 
@@ -296,10 +351,9 @@ class GameWindow < Gosu::Window
       close
     end
   end
-end
 
+end
 
 
 window = GameWindow.new
 window.show
-

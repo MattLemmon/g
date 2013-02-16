@@ -1,0 +1,10 @@
+About and How it Came To Be: ---
+This is walljumping with Captain Ruby.
+I had recently studied only three tutorials with Ruby and wanted to see how aesome Ruby really was.
+My results? Ruby is awesome. I implemented walljumping because it's just cool in general. 
+
+Credits: ---
+If you use any of the code or modification of it, I'd like just an itty-bitty "thank you" or something in the game. If you don't that's fine but if you're a good person you will! *Or Die*
+
+Thank yous: ---
+Thanks Julian for Gosu. It is awesome.

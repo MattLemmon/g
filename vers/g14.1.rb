@@ -1,3 +1,6 @@
+# In g14.1.rb I am trying to update the code to the
+# style used in g9_mjl.rb
+
 require 'gosu'
 
 

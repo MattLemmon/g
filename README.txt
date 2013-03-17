@@ -35,9 +35,9 @@ HOW TO PLAY:     `     .     *           `                 *       `
 .     `         *                       *     `             `            
   -       You win if you can help create a Welcome Screen.         `  .
        `                .                   .                         
-   *         -        ,       -      '     .        *         '  
-  `        .     *          .    .      ,      `       *           .
-.      .           `      .   `     *                     *           
+   *         -        ,  SPOONER WINS !!!          *         '  
+  `        .     *                             `       *           .
+.      .           `      lol_o2 WINS!!!                   *           
    -        .    .       `        .        .      `            .      .
  .     `      `        .  `              `    .               `  .
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -282,9 +282,13 @@ WELCOME SCREEN MOCKUP:
 
                     W I N N E R S '   C I R C L E
 
-                                Mike
+                                spooner
 
-                                Jon
+                                lol_o2
+
+                                 Mike
+
+                                 Jon
 
 
 

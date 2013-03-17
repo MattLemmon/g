@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Gosu::Image</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../gosu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="gosu.rb">gosu.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-from_text">::from_text</a></li>
+					
+					<li><a href="#method-c-from_text">::from_text</a></li>
+					
+					<li><a href="#method-c-load_tiles">::load_tiles</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-draw">#draw</a></li>
+					
+					<li><a href="#method-i-draw_as_quad">#draw_as_quad</a></li>
+					
+					<li><a href="#method-i-draw_rot">#draw_rot</a></li>
+					
+					<li><a href="#method-i-gl_tex_info">#gl_tex_info</a></li>
+					
+					<li><a href="#method-i-insert">#insert</a></li>
+					
+					<li><a href="#method-i-save">#save</a></li>
+					
+					<li><a href="#method-i-to_blob">#to_blob</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Gosu.html">Gosu</a></li>
+				
+					<li><a href="../Gosu/Color.html">Gosu::Color</a></li>
+				
+					<li><a href="../Gosu/Font.html">Gosu::Font</a></li>
+				
+					<li><a href="../Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+				
+					<li><a href="../Gosu/Image.html">Gosu::Image</a></li>
+				
+					<li><a href="../Gosu/Sample.html">Gosu::Sample</a></li>
+				
+					<li><a href="../Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+				
+					<li><a href="../Gosu/Song.html">Gosu::Song</a></li>
+				
+					<li><a href="../Gosu/TextInput.html">Gosu::TextInput</a></li>
+				
+					<li><a href="../Gosu/Window.html">Gosu::Window</a></li>
+				
+					<li><a href="../Numeric.html">Numeric</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Gosu::Image</h1>
+
+		<div id="description">
+			<p>
+Provides functionality for drawing rectangular images.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="width-attribute-method" class="method-detail">
+				<a name="width"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">width</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="height-attribute-method" class="method-detail">
+				<a name="height"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">height</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="from-text-method" class="method-detail ">
+				<a name="method-c-from_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_text</span><span
+						class="method-args">(window, text, font_name, font_height, line_spacing, max_width, align)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates an <a href="Image.html">Image</a> that is filled with the text
+given to the function.
+</p>
+<p>
+The text may contain line breaks.
+</p>
+<p>
+The text is always rendered in white. If you want to draw it in a different
+color, just modulate it by the target color.
+</p>
+<table>
+<tr><td valign="top">font_name</td><td><p>
+Name of a system font, or a filename to a TTF file (must contain
+&#8217;/&#8217;).
+</p>
+</td></tr>
+<tr><td valign="top">font_height</td><td><p>
+Height of the font in pixels.
+</p>
+</td></tr>
+<tr><td valign="top">line_spacing</td><td><p>
+Spacing between two lines of text in pixels.
+</p>
+</td></tr>
+<tr><td valign="top">max_width</td><td><p>
+Width of the bitmap that will be returned. Text will be split into multiple
+lines to avoid drawing over the right border. When a single word is too
+long, it will be truncated.
+</p>
+</td></tr>
+<tr><td valign="top">align</td><td><p>
+One of :left, :right, :center or :justify.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="from-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 273</span>
+273:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from_text</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">font_name</span>, <span class="ruby-identifier">font_height</span>, <span class="ruby-identifier">line_spacing</span>, <span class="ruby-identifier">max_width</span>, <span class="ruby-identifier">align</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-text-method" class="method-detail ">
+				<a name="method-c-from_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_text</span><span
+						class="method-args">(window, text, font_name, font_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates an <a href="Image.html">Image</a> containing a line of text.
+</p>
+<p>
+The text is always rendered in white. If you want to draw it in a different
+color, just modulate it by the target color.
+</p>
+<table>
+<tr><td valign="top">font_name</td><td><p>
+Name of a system font, or a filename to a TTF file (must contain
+&#8217;/&#8217;).
+</p>
+</td></tr>
+<tr><td valign="top">font_height</td><td><p>
+Height of the font in pixels.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="from-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 260</span>
+260:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from_text</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">font_name</span>, <span class="ruby-identifier">font_height</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-tiles-method" class="method-detail ">
+				<a name="method-c-load_tiles"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_tiles</span><span
+						class="method-args">(window, filename_or_rmagick_image, tile_width, tile_height, tileable)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convenience function that splits an image file into an array of small
+rectangles and creates images from these. Returns the Array containing <a
+href="Image.html">Image</a> instances.
+</p>
+<p>
+A color key of # is automatically applied to BMP type images.
+</p>
+<table>
+<tr><td valign="top">tile_width</td><td><p>
+If positive, specifies the width of one tile in pixels. If negative, the
+bitmap is divided into -tile_width rows.
+</p>
+</td></tr>
+<tr><td valign="top">tile_height</td><td><p>
+See tile_width.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="load-tiles-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 282</span>
+282:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">load_tiles</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">filename_or_rmagick_image</span>, <span class="ruby-identifier">tile_width</span>, <span class="ruby-identifier">tile_height</span>, <span class="ruby-identifier">tileable</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(window, filename_or_rmagick_image, tileable)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Loads an image from a given filename that can be drawn onto the given
+window. See the <a href="../Gosu.html">Gosu</a> wiki for a list of
+supported formats.
+</p>
+<p>
+A color key of # is automatically applied to BMP type images.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 231</span>
+231:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">filename_or_rmagick_image</span>, <span class="ruby-identifier">tileable</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(window, filename_or_rmagick_image, tileable, src_x, src_y, src_width, src_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Loads an image from a given filename that can be drawn onto the given
+window. See the <a href="../Gosu.html">Gosu</a> wiki for a list of
+supported formats.
+</p>
+<p>
+A color key of # is automatically applied to BMP type images.
+</p>
+<p>
+This constructor only loads a sub-rectangle of the given file. Because
+every call of this constructor will open the image again, it is preferable
+to use Image#load_tiles when possible.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 241</span>
+241:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">filename_or_rmagick_image</span>, <span class="ruby-identifier">tileable</span>, <span class="ruby-identifier">src_x</span>, <span class="ruby-identifier">src_y</span>, <span class="ruby-identifier">src_width</span>, <span class="ruby-identifier">src_height</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="draw-method" class="method-detail ">
+				<a name="method-i-draw"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw</span><span
+						class="method-args">(x, y, z, factor_x=1, factor_y=1, color=0xffffffff, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws the image so its upper left corner is at (x; y).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 244</span>
+244:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">factor_x</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">factor_y</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">color</span>=<span class="ruby-value">0xffffffff</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-as-quad-method" class="method-detail ">
+				<a name="method-i-draw_as_quad"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_as_quad</span><span
+						class="method-args">(x1, y1, c1, x2, y2, c2, x3, y3, c3, x4, y4, c4, z, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Like <a href="Window.html#method-i-draw_quad">Window#draw_quad</a>, but
+with this texture instead of colors. Can be used to implement advanced,
+non-rectangular drawing techniques and takes four points and the modulation
+color at each of them. The points can be in clockwise order, or in a Z
+shape, starting at the top left.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-as-quad-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 252</span>
+252:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_as_quad</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">c1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">c2</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>, <span class="ruby-identifier">c3</span>, <span class="ruby-identifier">x4</span>, <span class="ruby-identifier">y4</span>, <span class="ruby-identifier">c4</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-rot-method" class="method-detail ">
+				<a name="method-i-draw_rot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_rot</span><span
+						class="method-args">(x, y, z, angle, center_x=0.5, center_y=0.5, factor_x=1, factor_y=1, color=0xffffffff, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<table>
+<tr><td valign="top">center_x</td><td><p>
+Relative horizontal position of the rotation center on the image. 0 is the
+left border, 1 is the right border, 0.5 is the center (and default)
+</p>
+</td></tr>
+<tr><td valign="top">center_y</td><td><p>
+See center_x.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-rot-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 248</span>
+248:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_rot</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">center_x</span>=<span class="ruby-value">0.5</span>, <span class="ruby-identifier">center_y</span>=<span class="ruby-value">0.5</span>, <span class="ruby-identifier">factor_x</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">factor_y</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">color</span>=<span class="ruby-value">0xffffffff</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gl-tex-info-method" class="method-detail ">
+				<a name="method-i-gl_tex_info"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gl_tex_info</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+See examples/OpenGLIntegration.rb.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gl-tex-info-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 285</span>
+285:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gl_tex_info</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="insert-method" class="method-detail ">
+				<a name="method-i-insert"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">insert</span><span
+						class="method-args">(filename_or_rmagick_image, x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Overwrites all or parts of the <a href="Image.html">Image</a>. x and y can
+be negative or otherwise out of bounds, the incoming image data is clipped
+to the current image size. This can be used to e.g. overwrite parts of a
+landscape.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="insert-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 294</span>
+294:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">filename_or_rmagick_image</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="save-method" class="method-detail ">
+				<a name="method-i-save"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">save</span><span
+						class="method-args">(filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Saves the texture contents as an image file. Useful, for example, to
+pre-render text on a development machine with proper fonts installed. The
+file format is determined from the file extension. See the <a
+href="../Gosu.html">Gosu</a> wiki for a list of portably supported formats.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="save-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 300</span>
+300:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save</span>(<span class="ruby-identifier">filename</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-blob-method" class="method-detail ">
+				<a name="method-i-to_blob"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_blob</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the associated texture contents as binary string of RGBA values.
+Useful for use with RMagick (Magick::Image.from_blob).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-blob-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 289</span>
+289:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_blob</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

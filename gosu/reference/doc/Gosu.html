@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Gosu</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./gosu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="gosu.rb">gosu.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/Color.html">Gosu::Color</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/Font.html">Gosu::Font</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/Image.html">Gosu::Image</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/Sample.html">Gosu::Sample</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/Song.html">Gosu::Song</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/TextInput.html">Gosu::TextInput</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Gosu/Window.html">Gosu::Window</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-angle">#angle</a></li>
+					
+					<li><a href="#method-i-angle_diff">#angle_diff</a></li>
+					
+					<li><a href="#method-i-default_font_name">#default_font_name</a></li>
+					
+					<li><a href="#method-i-distance">#distance</a></li>
+					
+					<li><a href="#method-i-language">#language</a></li>
+					
+					<li><a href="#method-i-milliseconds">#milliseconds</a></li>
+					
+					<li><a href="#method-i-offset_x">#offset_x</a></li>
+					
+					<li><a href="#method-i-offset_y">#offset_y</a></li>
+					
+					<li><a href="#method-i-random">#random</a></li>
+					
+					<li><a href="#method-i-screen_height">#screen_height</a></li>
+					
+					<li><a href="#method-i-screen_width">#screen_width</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Gosu.html">Gosu</a></li>
+				
+					<li><a href="./Gosu/Color.html">Gosu::Color</a></li>
+				
+					<li><a href="./Gosu/Font.html">Gosu::Font</a></li>
+				
+					<li><a href="./Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+				
+					<li><a href="./Gosu/Image.html">Gosu::Image</a></li>
+				
+					<li><a href="./Gosu/Sample.html">Gosu::Sample</a></li>
+				
+					<li><a href="./Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+				
+					<li><a href="./Gosu/Song.html">Gosu::Song</a></li>
+				
+					<li><a href="./Gosu/TextInput.html">Gosu::TextInput</a></li>
+				
+					<li><a href="./Gosu/Window.html">Gosu::Window</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Gosu</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Kb0">Kb0</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb1">Kb1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb2">Kb2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb3">Kb3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb4">Kb4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb5">Kb5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb6">Kb6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb7">Kb7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb8">Kb8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Kb9">Kb9</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbA">KbA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbB">KbB</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbC">KbC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbD">KbD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbE">KbE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF">KbF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbG">KbG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbH">KbH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbI">KbI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbJ">KbJ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbK">KbK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbL">KbL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbM">KbM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbN">KbN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbO">KbO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbP">KbP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbQ">KbQ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbR">KbR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbS">KbS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbT">KbT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbU">KbU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbV">KbV</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbW">KbW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbX">KbX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbY">KbY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbZ">KbZ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbBackspace">KbBackspace</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbDelete">KbDelete</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbDown">KbDown</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbEnd">KbEnd</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbEnter">KbEnter</a></dt>
+				
+				<dd class="description"><p>
+On Numpad
+</p></dd>
+				
+			
+				<dt><a name="KbEscape">KbEscape</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF1">KbF1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF10">KbF10</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF11">KbF11</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF12">KbF12</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF2">KbF2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF3">KbF3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF4">KbF4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF5">KbF5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF6">KbF6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF7">KbF7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF8">KbF8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbF9">KbF9</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbHome">KbHome</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbInsert">KbInsert</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbLeft">KbLeft</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbLeftAlt">KbLeftAlt</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbLeftControl">KbLeftControl</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbLeftShift">KbLeftShift</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad0">KbNumpad0</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad1">KbNumpad1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad2">KbNumpad2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad3">KbNumpad3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad4">KbNumpad4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad5">KbNumpad5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad6">KbNumpad6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad7">KbNumpad7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad8">KbNumpad8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpad9">KbNumpad9</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpadAdd">KbNumpadAdd</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpadDivide">KbNumpadDivide</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpadMultiply">KbNumpadMultiply</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbNumpadSubtract">KbNumpadSubtract</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbPageDown">KbPageDown</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbPageUp">KbPageUp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbReturn">KbReturn</a></dt>
+				
+				<dd class="description"><p>
+Above the right shift key
+</p></dd>
+				
+			
+				<dt><a name="KbRight">KbRight</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbRightAlt">KbRightAlt</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbRightControl">KbRightControl</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbRightShift">KbRightShift</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbSpace">KbSpace</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbTab">KbTab</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KbUp">KbUp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MsLeft">MsLeft</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MsMiddle">MsMiddle</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MsRight">MsRight</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MsWheelDown">MsWheelDown</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MsWheelUp">MsWheelUp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton0">GpButton0</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton1">GpButton1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton10">GpButton10</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton11">GpButton11</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton12">GpButton12</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton13">GpButton13</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton14">GpButton14</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton15">GpButton15</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton2">GpButton2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton3">GpButton3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton4">GpButton4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton5">GpButton5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton6">GpButton6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton7">GpButton7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton8">GpButton8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpButton9">GpButton9</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpDown">GpDown</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpLeft">GpLeft</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpRight">GpRight</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GpUp">GpUp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="angle-method" class="method-detail ">
+				<a name="method-i-angle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">angle</span><span
+						class="method-args">(x1, y1, x2, y2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the angle from point 1 to point 2 in degrees, where 0.0 means
+upwards. Returns 0 if both points are equal.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="angle-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 551</span>
+551:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">angle</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="angle-diff-method" class="method-detail ">
+				<a name="method-i-angle_diff"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">angle_diff</span><span
+						class="method-args">(angle1, angle2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the smallest angle that can be added to angle1 to get to angle2
+(can be negative if counter-clockwise movement is shorter).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="angle-diff-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 554</span>
+554:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">angle_diff</span>(<span class="ruby-identifier">angle1</span>, <span class="ruby-identifier">angle2</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="default-font-name-method" class="method-detail ">
+				<a name="method-i-default_font_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">default_font_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the name of a neutral font that is available on the current
+platform.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="default-font-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 564</span>
+564:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default_font_name</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="distance-method" class="method-detail ">
+				<a name="method-i-distance"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">distance</span><span
+						class="method-args">(x1, y1, x2, y2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the distance between two points.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="distance-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 557</span>
+557:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">distance</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="language-method" class="method-detail ">
+				<a name="method-i-language"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">language</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the user&#8217;s preferred language, at the moment of calling the
+function. Expect return values such as &#8216;en_US&#8217;,
+&#8216;de_DE.UTF-8&#8217;, &#8216;ja&#8217;, &#8216;zh-Hans&#8217;. You can
+rely only on the first two letters being a common language abbreviation.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="language-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 575</span>
+575:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">language</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="milliseconds-method" class="method-detail ">
+				<a name="method-i-milliseconds"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">milliseconds</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Incrementing, possibly wrapping millisecond timer.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="milliseconds-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 560</span>
+560:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">milliseconds</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offset-x-method" class="method-detail ">
+				<a name="method-i-offset_x"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offset_x</span><span
+						class="method-args">(angle, dist)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the horizontal distance between the origin and the point to which
+you would get if you moved radius pixels in the direction specified by
+angle.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="offset-x-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 545</span>
+545:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offset_x</span>(<span class="ruby-identifier">angle</span>, <span class="ruby-identifier">dist</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offset-y-method" class="method-detail ">
+				<a name="method-i-offset_y"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offset_y</span><span
+						class="method-args">(angle, dist)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the vertical distance between the origin and the point to which you
+would get if you moved radius pixels in the direction specified by angle.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="offset-y-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 548</span>
+548:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offset_y</span>(<span class="ruby-identifier">angle</span>, <span class="ruby-identifier">dist</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="random-method" class="method-detail ">
+				<a name="method-i-random"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">random</span><span
+						class="method-args">(min, max)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a random double between min (inclusive) and max (exclusive).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="random-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 542</span>
+542:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">random</span>(<span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="screen-height-method" class="method-detail ">
+				<a name="method-i-screen_height"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">screen_height</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the height, in pixels, of the user&#8217;s primary screen.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="screen-height-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 570</span>
+570:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">screen_height</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="screen-width-method" class="method-detail ">
+				<a name="method-i-screen_width"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">screen_width</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the width, in pixels, of the user&#8217;s primary screen.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="screen-width-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 567</span>
+567:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">screen_width</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

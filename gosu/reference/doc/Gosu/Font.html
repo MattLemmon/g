@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Gosu::Font</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../gosu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="gosu.rb">gosu.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%5B%5D%3D">#[]=</a></li>
+					
+					<li><a href="#method-i-draw">#draw</a></li>
+					
+					<li><a href="#method-i-draw_rel">#draw_rel</a></li>
+					
+					<li><a href="#method-i-draw_rot">#draw_rot</a></li>
+					
+					<li><a href="#method-i-text_width">#text_width</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Gosu.html">Gosu</a></li>
+				
+					<li><a href="../Gosu/Color.html">Gosu::Color</a></li>
+				
+					<li><a href="../Gosu/Font.html">Gosu::Font</a></li>
+				
+					<li><a href="../Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+				
+					<li><a href="../Gosu/Image.html">Gosu::Image</a></li>
+				
+					<li><a href="../Gosu/Sample.html">Gosu::Sample</a></li>
+				
+					<li><a href="../Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+				
+					<li><a href="../Gosu/Song.html">Gosu::Song</a></li>
+				
+					<li><a href="../Gosu/TextInput.html">Gosu::TextInput</a></li>
+				
+					<li><a href="../Gosu/Window.html">Gosu::Window</a></li>
+				
+					<li><a href="../Numeric.html">Numeric</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Gosu::Font</h1>
+
+		<div id="description">
+			<p>
+A font can be used to draw text on a <a href="Window.html">Window</a>
+object very flexibly. Fonts are ideal for small texts that change
+regularly. For large, static texts you should use Image#from_text.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="name-attribute-method" class="method-detail">
+				<a name="name"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">name</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="height-attribute-method" class="method-detail">
+				<a name="height"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">height</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(window, font_name, height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<table>
+<tr><td valign="top">font_name</td><td><p>
+Name of a system font, or a filename to a TTF file (must contain
+&#8217;/&#8217;).
+</p>
+</td></tr>
+<tr><td valign="top">height</td><td><p>
+Height of the font, in pixels.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 200</span>
+200:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">font_name</span>, <span class="ruby-identifier">height</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%5B%5D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]=</span><span
+						class="method-args">(character, image)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sets the image to be used for a certain character. Must not be called twice
+for the same character, or after the character has been drawn already.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 203</span>
+203:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-identifier">character</span>, <span class="ruby-identifier">image</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-method" class="method-detail ">
+				<a name="method-i-draw"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw</span><span
+						class="method-args">(text, x, y, z, factor_x=1, factor_y=1, color=0xffffffff, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws text so the top left corner of the text is at (x; y).
+</p>
+<p>
+Characters are created internally as needed.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 208</span>
+208:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">factor_x</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">factor_y</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">color</span>=<span class="ruby-value">0xffffffff</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-rel-method" class="method-detail ">
+				<a name="method-i-draw_rel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_rel</span><span
+						class="method-args">(text, x, y, z, rel_x, rel_y, factor_x=1, factor_y=1, color=0xffffffff, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws text at a position relative to (x; y).
+</p>
+<table>
+<tr><td valign="top">rel_x</td><td><p>
+Determines where the text is drawn horizontally. If relX is 0.0, the text
+will be to the right of x, if it is 1.0, the text will be to the left of x,
+if it is 0.5, it will be centered on x. Of course, all real numbers are
+possible values.
+</p>
+</td></tr>
+<tr><td valign="top">rel_y</td><td><p>
+See rel_x.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-rel-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 213</span>
+213:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_rel</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">rel_x</span>, <span class="ruby-identifier">rel_y</span>, <span class="ruby-identifier">factor_x</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">factor_y</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">color</span>=<span class="ruby-value">0xffffffff</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-rot-method" class="method-detail ">
+				<a name="method-i-draw_rot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_rot</span><span
+						class="method-args">(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Analogous to draw, but rotates the text by a given angle. @deprecated Use a
+combination of <a href="Window.html#method-i-rotate">Window#rotate</a> and
+<a href="Font.html#method-i-draw">Font#draw</a> instead.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-rot-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 220</span>
+220:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_rot</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">angle</span>, <span class="ruby-identifier">factor_x</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">factor_y</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">color</span>=<span class="ruby-value">0xffffffff</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-width-method" class="method-detail ">
+				<a name="method-i-text_width"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text_width</span><span
+						class="method-args">(text, factor_x=1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the width, in pixels, the given text would occupy if drawn.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-width-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 216</span>
+216:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_width</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">factor_x</span>=<span class="ruby-value">1</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

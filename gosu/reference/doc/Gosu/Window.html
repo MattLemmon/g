@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Gosu::Window</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../gosu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="gosu.rb">gosu.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-button_id_to_char">::button_id_to_char</a></li>
+					
+					<li><a href="#method-c-char_to_button_id">::char_to_button_id</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-button_down">#button_down</a></li>
+					
+					<li><a href="#method-i-button_down%3F">#button_down?</a></li>
+					
+					<li><a href="#method-i-button_up">#button_up</a></li>
+					
+					<li><a href="#method-i-clip_to">#clip_to</a></li>
+					
+					<li><a href="#method-i-close">#close</a></li>
+					
+					<li><a href="#method-i-draw">#draw</a></li>
+					
+					<li><a href="#method-i-draw_line">#draw_line</a></li>
+					
+					<li><a href="#method-i-draw_quad">#draw_quad</a></li>
+					
+					<li><a href="#method-i-draw_triangle">#draw_triangle</a></li>
+					
+					<li><a href="#method-i-flush">#flush</a></li>
+					
+					<li><a href="#method-i-gl">#gl</a></li>
+					
+					<li><a href="#method-i-needs_cursor%3F">#needs_cursor?</a></li>
+					
+					<li><a href="#method-i-needs_redraw%3F">#needs_redraw?</a></li>
+					
+					<li><a href="#method-i-record">#record</a></li>
+					
+					<li><a href="#method-i-rotate">#rotate</a></li>
+					
+					<li><a href="#method-i-scale">#scale</a></li>
+					
+					<li><a href="#method-i-scale">#scale</a></li>
+					
+					<li><a href="#method-i-set_mouse_position">#set_mouse_position</a></li>
+					
+					<li><a href="#method-i-show">#show</a></li>
+					
+					<li><a href="#method-i-transform">#transform</a></li>
+					
+					<li><a href="#method-i-translate">#translate</a></li>
+					
+					<li><a href="#method-i-update">#update</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Gosu.html">Gosu</a></li>
+				
+					<li><a href="../Gosu/Color.html">Gosu::Color</a></li>
+				
+					<li><a href="../Gosu/Font.html">Gosu::Font</a></li>
+				
+					<li><a href="../Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+				
+					<li><a href="../Gosu/Image.html">Gosu::Image</a></li>
+				
+					<li><a href="../Gosu/Sample.html">Gosu::Sample</a></li>
+				
+					<li><a href="../Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+				
+					<li><a href="../Gosu/Song.html">Gosu::Song</a></li>
+				
+					<li><a href="../Gosu/TextInput.html">Gosu::TextInput</a></li>
+				
+					<li><a href="../Gosu/Window.html">Gosu::Window</a></li>
+				
+					<li><a href="../Numeric.html">Numeric</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Gosu::Window</h1>
+
+		<div id="description">
+			<p>
+Main class that serves as the foundation of a standard <a
+href="../Gosu.html">Gosu</a> application. Manages initialization of all of
+Gosu&#8217;s core components and provides timing functionality.
+</p>
+<p>
+Note that all coordinates, even the mouse position, are in client
+coordinates relative to the window. This means that the mouse position can
+be negative or larger than the window size.
+</p>
+<p>
+Note that you should really only use one instance of this class at the same
+time. This may or may not change later.
+</p>
+<p>
+Right now, having two or more windows and loading samples or songs on both
+of them will result in an exception.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="caption-attribute-method" class="method-detail">
+				<a name="caption"></a>
+				
+				<a name="caption="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">caption</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="mouse-x-attribute-method" class="method-detail">
+				<a name="mouse_x"></a>
+				
+				<a name="mouse_x="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">mouse_x</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="mouse-y-attribute-method" class="method-detail">
+				<a name="mouse_y"></a>
+				
+				<a name="mouse_y="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">mouse_y</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="text-input-attribute-method" class="method-detail">
+				<a name="text_input"></a>
+				
+				<a name="text_input="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">text_input</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="width-attribute-method" class="method-detail">
+				<a name="width"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">width</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="height-attribute-method" class="method-detail">
+				<a name="height"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">height</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="fullscreen--attribute-method" class="method-detail">
+				<a name="fullscreen?"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">fullscreen?</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="update-interval-attribute-method" class="method-detail">
+				<a name="update_interval"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">update_interval</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="button-id-to-char-method" class="method-detail ">
+				<a name="method-c-button_id_to_char"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button_id_to_char</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the character a button usually produces, or nil. To implement real
+text-input facilities, look at the <a href="TextInput.html">TextInput</a>
+class instead.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="button-id-to-char-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 523</span>
+523:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">button_id_to_char</span>(<span class="ruby-identifier">id</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="char-to-button-id-method" class="method-detail ">
+				<a name="method-c-char_to_button_id"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">char_to_button_id</span><span
+						class="method-args">(char)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the button that has to be pressed to produce the given character,
+or nil.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="char-to-button-id-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 526</span>
+526:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">char_to_button_id</span>(<span class="ruby-identifier">char</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(width, height, fullscreen, update_interval=16.666666)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<table>
+<tr><td valign="top"><a href="Window.html#update_interval">update_interval</a></td><td><p>
+Interval in milliseconds between two calls
+</p>
+</td></tr>
+</table>
+<p>
+to the update member function. The default means the game will run at 60
+FPS, which is ideal on standard 60 Hz TFT screens.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 425</span>
+425:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">fullscreen</span>, <span class="ruby-identifier">update_interval</span>=<span class="ruby-value">16.666666</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="button-down-method" class="method-detail ">
+				<a name="method-i-button_down"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button_down</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called before update when the user pressed a button while the window had
+the focus.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="button-down-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 456</span>
+456:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button_down</span>(<span class="ruby-identifier">id</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="button-down--method" class="method-detail ">
+				<a name="method-i-button_down%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button_down?</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if a button is currently pressed. Updated every tick.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="button-down--source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 461</span>
+461:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button_down?</span>(<span class="ruby-identifier">id</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="button-up-method" class="method-detail ">
+				<a name="method-i-button_up"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button_up</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as buttonDown. Called then the user released a button.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="button-up-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 458</span>
+458:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button_up</span>(<span class="ruby-identifier">id</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="clip-to-method" class="method-detail ">
+				<a name="method-i-clip_to"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">clip_to</span><span
+						class="method-args">(x, y, w, h, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Limits the drawing area to a given rectangle while evaluating the code
+inside of the block.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="clip-to-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 493</span>
+493:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clip_to</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="method-i-close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tells the window to end the current show loop as soon as possible.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 431</span>
+431:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-method" class="method-detail ">
+				<a name="method-i-draw"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called after every update and when the OS wants the window to repaint
+itself. Your application&#8217;s rendering code goes here.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 439</span>
+439:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-line-method" class="method-detail ">
+				<a name="method-i-draw_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_line</span><span
+						class="method-args">(x1, y1, c1, x2, y2, c2, z=0, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws a line from one point to another (last pixel exclusive). Note: OpenGL
+lines are not reliable at all and may have a missing pixel at the start or
+end point. Please only use this for debugging purposes. Otherwise, use a
+quad or image to simulate lines, or contribute a better <a
+href="Window.html#method-i-draw_line">draw_line</a> to <a
+href="../Gosu.html">Gosu</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-line-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 467</span>
+467:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_line</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">c1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">c2</span>, <span class="ruby-identifier">z</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-quad-method" class="method-detail ">
+				<a name="method-i-draw_quad"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_quad</span><span
+						class="method-args">(x1, y1, c1, x2, y2, c2, x3, y3, c3, x4, y4, c4, z=0, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws a rectangle (two triangles) with given corners and corresponding
+colors. The points can be in clockwise order, or in a Z shape.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="draw-quad-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 474</span>
+474:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_quad</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">c1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">c2</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>, <span class="ruby-identifier">c3</span>, <span class="ruby-identifier">x4</span>, <span class="ruby-identifier">y4</span>, <span class="ruby-identifier">c4</span>, <span class="ruby-identifier">z</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-triangle-method" class="method-detail ">
+				<a name="method-i-draw_triangle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw_triangle</span><span
+						class="method-args">(x1, y1, c1, x2, y2, c2, x3, y3, c3, z=0, mode=:default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="draw-triangle-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 469</span>
+469:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw_triangle</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">c1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">c2</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>, <span class="ruby-identifier">c3</span>, <span class="ruby-identifier">z</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">mode</span>=<span class="ruby-value">:default</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flush-method" class="method-detail ">
+				<a name="method-i-flush"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flush</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Flushes all drawing operations to OpenGL so that Z-ordering can start anew.
+This is useful when drawing several parts of code on top of each other that
+use conflicting z positions.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="flush-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 479</span>
+479:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flush</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gl-method" class="method-detail ">
+				<a name="method-i-gl"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gl</span><span
+						class="method-args">(z=nil, &custom_gl_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+For custom OpenGL calls. Executes the given block in a clean OpenGL
+environment. Use the ruby-opengl gem to access OpenGL function (if you
+manage to get it to work). IF no z position is given, it will execute the
+given block immediately, otherwise, the code will be scheduled to be called
+between <a href="../Gosu.html">Gosu</a> drawing operations.
+</p>
+<p>
+Note: You cannot call <a href="../Gosu.html">Gosu</a> rendering functions
+within this block, and you can only call the gl function in the call tree
+of <a href="Window.html#method-i-draw">Window#draw</a>.
+</p>
+<p>
+See examples/OpenGLIntegration.rb for an example.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gl-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 490</span>
+490:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gl</span>(<span class="ruby-identifier">z</span>=<span class="ruby-keyword kw">nil</span>, &amp;<span class="ruby-identifier">custom_gl_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="needs-cursor--method" class="method-detail ">
+				<a name="method-i-needs_cursor%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">needs_cursor?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Can be overriden to show the system cursor when necessary, e.g. in level
+editors or other situations where introducing a custom cursor is not
+desired.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="needs-cursor--source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 452</span>
+452:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">needs_cursor?</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="needs-redraw--method" class="method-detail ">
+				<a name="method-i-needs_redraw%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">needs_redraw?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Can be overriden to give the game a chance to say no to being redrawn. This
+is not a definitive answer. The operating system can still cause redraws
+for one reason or another.
+</p>
+<p>
+By default, the window is redrawn all the time (i.e. <a
+href="Window.html#method-i-needs_redraw%3F">Window#needs_redraw?</a> always
+returns true.)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="needs-redraw--source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 447</span>
+447:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">needs_redraw?</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="record-method" class="method-detail ">
+				<a name="method-i-record"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">record</span><span
+						class="method-args">(width, height, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <a href="Image.html">Gosu::Image</a> that containes everything
+rendered within the given block. It can be used to optimize rendering of
+many static images, e.g. the map. There are still several restrictions that
+you will be informed about via exceptions.
+</p>
+<p>
+The returned <a href="Image.html">Gosu::Image</a> will have the width and
+height you pass as arguments, regardless of how the area you draw on. It is
+important to pass accurate values if you plan on using <a
+href="Image.html#method-i-draw_as_quad">Gosu::Image#draw_as_quad</a> or <a
+href="Image.html#method-i-draw_rot">Gosu::Image#draw_rot</a> with the
+result later.
+</p>
+<p>
+@return [Gosu::Image]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="record-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 504</span>
+504:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rotate-method" class="method-detail ">
+				<a name="method-i-rotate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rotate</span><span
+						class="method-args">(angle, around_x=0, around_y=0, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Rotates everything drawn in the block around (around_x, around_y).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rotate-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 507</span>
+507:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate</span>(<span class="ruby-identifier">angle</span>, <span class="ruby-identifier">around_x</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">around_y</span>=<span class="ruby-value">0</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scale-method" class="method-detail ">
+				<a name="method-i-scale"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scale</span><span
+						class="method-args">(factor_x, factor_y, around_x, around_y, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Scales everything drawn in the block by a factor for each dimension.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="scale-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 513</span>
+513:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scale</span>(<span class="ruby-identifier">factor_x</span>, <span class="ruby-identifier">factor_y</span>, <span class="ruby-identifier">around_x</span>, <span class="ruby-identifier">around_y</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scale-method" class="method-detail ">
+				<a name="method-i-scale"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scale</span><span
+						class="method-args">(factor_x, factor_y=factor_x, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Scales everything drawn in the block by a factor.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="scale-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 510</span>
+510:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scale</span>(<span class="ruby-identifier">factor_x</span>, <span class="ruby-identifier">factor_y</span>=<span class="ruby-identifier">factor_x</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-mouse-position-method" class="method-detail ">
+				<a name="method-i-set_mouse_position"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_mouse_position</span><span
+						class="method-args">(x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@deprecated Use Window#mouse_x= and Window#mouse_y= instead.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-mouse-position-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 529</span>
+529:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_mouse_position</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="show-method" class="method-detail ">
+				<a name="method-i-show"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">show</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Enters a modal loop where the <a href="Window.html">Window</a> is visible
+on screen and receives calls to draw, update etc.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="show-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 428</span>
+428:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="transform-method" class="method-detail ">
+				<a name="method-i-transform"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">transform</span><span
+						class="method-args">(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Applies a free-form matrix rotation to everything drawn in the block.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="transform-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 519</span>
+519:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">transform</span>(<span class="ruby-identifier">m0</span>, <span class="ruby-identifier">m1</span>, <span class="ruby-identifier">m2</span>, <span class="ruby-identifier">m3</span>, <span class="ruby-identifier">m4</span>, <span class="ruby-identifier">m5</span>, <span class="ruby-identifier">m6</span>, <span class="ruby-identifier">m7</span>, <span class="ruby-identifier">m8</span>, <span class="ruby-identifier">m9</span>, <span class="ruby-identifier">m10</span>, <span class="ruby-identifier">m11</span>, <span class="ruby-identifier">m12</span>, <span class="ruby-identifier">m13</span>, <span class="ruby-identifier">m14</span>, <span class="ruby-identifier">m15</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="translate-method" class="method-detail ">
+				<a name="method-i-translate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">translate</span><span
+						class="method-args">(x, y, &rendering_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Moves everything drawn in the block by an offset in each dimension.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="translate-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 516</span>
+516:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">translate</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, &amp;<span class="ruby-identifier">rendering_code</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="update-method" class="method-detail ">
+				<a name="method-i-update"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">update</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called every <a href="Window.html#update_interval">update_interval</a>
+milliseconds while the window is being shown. Your application&#8217;s main
+game logic goes here.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="update-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 435</span>
+435:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

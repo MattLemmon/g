@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: GameWindow</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./g9_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="g9.rb">g9.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Gosu::Window</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-button_down">#button_down</a></li>
+					
+					<li><a href="#method-i-draw">#draw</a></li>
+					
+					<li><a href="#method-i-update">#update</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Drone.html">Drone</a></li>
+				
+					<li><a href="./GameWindow.html">GameWindow</a></li>
+				
+					<li><a href="./Player.html">Player</a></li>
+				
+					<li><a href="./Star.html">Star</a></li>
+				
+					<li><a href="./ZOrder.html">ZOrder</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">GameWindow</h1>
+
+		<div id="description">
+			<p>
+W I N D O W     C L A S S
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 253</span>
+253:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+254:     <span class="ruby-keyword kw">super</span> <span class="ruby-value">1200</span>, <span class="ruby-value">800</span>, <span class="ruby-keyword kw">false</span>
+255:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">caption</span> = <span class="ruby-value str">&quot;           *  *  *  *  *    G A L A X Y   C R A F T    *  *  *  *  *                                                                                                   c o s m i c   s o u p&quot;</span>
+256:     <span class="ruby-ivar">@background_image</span> = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;media/Space.6.png&quot;</span>, <span class="ruby-keyword kw">true</span>)
+257: 
+258:     <span class="ruby-ivar">@player</span> = <span class="ruby-constant">Player</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+259:     <span class="ruby-ivar">@player</span>.<span class="ruby-identifier">warp</span>(<span class="ruby-value">600</span>,<span class="ruby-value">400</span>)
+260: 
+261:     <span class="ruby-ivar">@drone_img</span> = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;media/Drone1.1.bmp&quot;</span>, <span class="ruby-keyword kw">false</span>)
+262: <span class="ruby-comment cmt">#    @drone_create = Gosu::Image::draw_rot(@x, @y, ZOrder::Drone, @angle)</span>
+263:     <span class="ruby-ivar">@drones</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+264: 
+265:     <span class="ruby-ivar">@star_anim</span> = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span><span class="ruby-operator">::</span><span class="ruby-identifier">load_tiles</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value str">&quot;media/Star.png&quot;</span>, <span class="ruby-value">25</span>, <span class="ruby-value">25</span>, <span class="ruby-keyword kw">false</span>)
+266:     <span class="ruby-ivar">@stars</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+267: 
+268:     <span class="ruby-ivar">@font</span> = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Font</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">default_font_name</span>, <span class="ruby-value">20</span>)
+269:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="button-down-method" class="method-detail ">
+				<a name="method-i-button_down"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button_down</span><span
+						class="method-args">(id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="button-down-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 334</span>
+334:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button_down</span>(<span class="ruby-identifier">id</span>)
+335:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbEscape</span>
+336:       <span class="ruby-identifier">close</span>
+337:     <span class="ruby-keyword kw">end</span>
+338:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-method" class="method-detail ">
+				<a name="method-i-draw"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="draw-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 324</span>
+324:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>
+325:         <span class="ruby-ivar">@player</span>.<span class="ruby-identifier">draw</span>
+326:     <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">drone</span><span class="ruby-operator">|</span> <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">draw</span> }
+327:     <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">star</span><span class="ruby-operator">|</span> <span class="ruby-identifier">star</span>.<span class="ruby-identifier">draw</span> }    
+328:     <span class="ruby-ivar">@background_image</span>.<span class="ruby-identifier">draw</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Background</span>)
+329:     <span class="ruby-ivar">@font</span>.<span class="ruby-identifier">draw</span>(<span class="ruby-node">&quot;PLAYER: #{@player.score}        Num Drones: #{@drones.size}      Num Stars: #{@stars.size}&quot;</span>, <span class="ruby-value">10</span>, <span class="ruby-value">10</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">UI</span>, <span class="ruby-value">1.0</span>, <span class="ruby-value">1.0</span>, <span class="ruby-value">0xffffff00</span>)
+330: <span class="ruby-comment cmt">#    @font.draw(&quot;PLAYER: #{@player.score}     DRONES : #{@drone.score}&quot;, 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)</span>
+331:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="update-method" class="method-detail ">
+				<a name="method-i-update"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">update</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="update-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 272</span>
+272:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>
+273:     <span class="ruby-ivar">@player</span>.<span class="ruby-identifier">movement</span>
+274:     <span class="ruby-ivar">@player</span>.<span class="ruby-identifier">move</span>
+275:     <span class="ruby-ivar">@player</span>.<span class="ruby-identifier">collect_stars</span>(<span class="ruby-ivar">@stars</span>)
+276:     <span class="ruby-ivar">@player</span>.<span class="ruby-identifier">kill_drones</span>(<span class="ruby-ivar">@drones</span>)
+277: 
+278:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">then</span>
+279:       <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Drone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-ivar">@drone_img</span>, <span class="ruby-identifier">rand</span>(<span class="ruby-value">1200</span>), <span class="ruby-identifier">rand</span>(<span class="ruby-value">800</span>), <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">Drone</span>, <span class="ruby-value">0.85</span>))
+280:     <span class="ruby-keyword kw">end</span>
+281: 
+282:     <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">drone</span><span class="ruby-operator">|</span>
+283:       <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">movement</span>
+284:       <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">move</span>
+285:       <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">collect_stars</span>(<span class="ruby-ivar">@stars</span>)
+286:       <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">hunger</span>
+287:     <span class="ruby-keyword kw">end</span>
+288:     
+289:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">780</span> <span class="ruby-keyword kw">then</span>
+290:       <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">drone</span><span class="ruby-operator">|</span>
+291:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">30</span>) <span class="ruby-operator">==</span> <span class="ruby-value">5</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">score</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1500</span> <span class="ruby-keyword kw">then</span>
+292:           <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">score_reset</span>
+293:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">2</span>) <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">then</span>
+294:             <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Drone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-ivar">@drone_img</span>, <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">y</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">SubDrone</span>,                ((<span class="ruby-identifier">drone</span>.<span class="ruby-identifier">veloz</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">100</span>) <span class="ruby-operator">/</span> <span class="ruby-value">500.00</span>) * <span class="ruby-value">1.12</span>)))
+295:             <span class="ruby-keyword kw">else</span>
+296:               <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Drone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-ivar">@drone_img</span>, <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">drone</span>.<span class="ruby-identifier">y</span>, <span class="ruby-constant">ZOrder</span><span class="ruby-operator">::</span><span class="ruby-constant">SubDrone</span>,                  ((<span class="ruby-identifier">drone</span>.<span class="ruby-identifier">veloz</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">100</span>) <span class="ruby-operator">/</span> <span class="ruby-value">500.00</span> ) * <span class="ruby-value">0.88</span>)))
+297:           <span class="ruby-keyword kw">end</span>
+298:         <span class="ruby-keyword kw">end</span>
+299: <span class="ruby-comment cmt">#</span>
+300: <span class="ruby-comment cmt">#        if drone.score &lt; -150 then</span>
+301: <span class="ruby-comment cmt">#          drone.die(@drones)</span>
+302: <span class="ruby-comment cmt">#        end</span>
+303: <span class="ruby-comment cmt">#</span>
+304:       <span class="ruby-keyword kw">end</span>
+305:     <span class="ruby-keyword kw">end</span>
+306: 
+307:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@drones</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">150</span> <span class="ruby-keyword kw">then</span>
+308:       <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Star</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@star_anim</span>))
+309:     <span class="ruby-keyword kw">end</span>
+310: 
+311:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">140</span>) <span class="ruby-operator">&lt;=</span> <span class="ruby-value">3</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">200</span> <span class="ruby-keyword kw">then</span>
+312:       <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Star</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@star_anim</span>))
+313:     <span class="ruby-keyword kw">end</span>
+314: 
+315:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbS</span> <span class="ruby-keyword kw">then</span>
+316:       <span class="ruby-ivar">@stars</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Star</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@star_anim</span>))
+317:     <span class="ruby-keyword kw">end</span>
+318: 
+319:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

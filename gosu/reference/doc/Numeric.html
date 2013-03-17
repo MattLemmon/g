@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Numeric</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./gosu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="gosu.rb">gosu.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-degrees_to_radians">#degrees_to_radians</a></li>
+					
+					<li><a href="#method-i-gosu_to_radians">#gosu_to_radians</a></li>
+					
+					<li><a href="#method-i-radians_to_degrees">#radians_to_degrees</a></li>
+					
+					<li><a href="#method-i-radians_to_gosu">#radians_to_gosu</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Gosu.html">Gosu</a></li>
+				
+					<li><a href="./Gosu/Color.html">Gosu::Color</a></li>
+				
+					<li><a href="./Gosu/Font.html">Gosu::Font</a></li>
+				
+					<li><a href="./Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+				
+					<li><a href="./Gosu/Image.html">Gosu::Image</a></li>
+				
+					<li><a href="./Gosu/Sample.html">Gosu::Sample</a></li>
+				
+					<li><a href="./Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+				
+					<li><a href="./Gosu/Song.html">Gosu::Song</a></li>
+				
+					<li><a href="./Gosu/TextInput.html">Gosu::TextInput</a></li>
+				
+					<li><a href="./Gosu/Window.html">Gosu::Window</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Numeric</h1>
+
+		<div id="description">
+			<p>
+Small additions to <a href="Numeric.html">Numeric</a> to make it easier to
+integrate <a href="Gosu.html">Gosu</a> with libraries that use radians,
+like Chipmunk.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="degrees-to-radians-method" class="method-detail ">
+				<a name="method-i-degrees_to_radians"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">degrees_to_radians</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Scales a degree value to radians.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="degrees-to-radians-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 592</span>
+592:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">degrees_to_radians</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gosu-to-radians-method" class="method-detail ">
+				<a name="method-i-gosu_to_radians"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gosu_to_radians</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns <tt>(self - 90) * Math::PI / 180.0</tt> Translates between
+Gosu&#8217;s angle system (where 0° is at the top) and radians (where 0 is
+at the right).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gosu-to-radians-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 589</span>
+589:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gosu_to_radians</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="radians-to-degrees-method" class="method-detail ">
+				<a name="method-i-radians_to_degrees"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">radians_to_degrees</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Scales a radian value to degrees.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="radians-to-degrees-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 595</span>
+595:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">radians_to_degrees</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="radians-to-gosu-method" class="method-detail ">
+				<a name="method-i-radians_to_gosu"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">radians_to_gosu</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns <tt>self * 180.0 / Math::PI + 90</tt>. Translates between
+Gosu&#8217;s angle system (where 0° is at the top) and radians (where 0 is
+at the right).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="radians-to-gosu-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 584</span>
+584:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">radians_to_gosu</span>(); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

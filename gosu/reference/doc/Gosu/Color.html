@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Gosu::Color</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../gosu_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="gosu.rb">gosu.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-argb">::argb</a></li>
+					
+					<li><a href="#method-c-argb">::argb</a></li>
+					
+					<li><a href="#method-c-from_ahsv">::from_ahsv</a></li>
+					
+					<li><a href="#method-c-from_hsv">::from_hsv</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-rgba">::rgba</a></li>
+					
+					<li><a href="#method-c-rgba">::rgba</a></li>
+					
+					<li><a href="#method-i-dup">#dup</a></li>
+					
+					<li><a href="#method-i-gl">#gl</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Gosu.html">Gosu</a></li>
+				
+					<li><a href="../Gosu/Color.html">Gosu::Color</a></li>
+				
+					<li><a href="../Gosu/Font.html">Gosu::Font</a></li>
+				
+					<li><a href="../Gosu/GLTexInfo.html">Gosu::GLTexInfo</a></li>
+				
+					<li><a href="../Gosu/Image.html">Gosu::Image</a></li>
+				
+					<li><a href="../Gosu/Sample.html">Gosu::Sample</a></li>
+				
+					<li><a href="../Gosu/SampleInstance.html">Gosu::SampleInstance</a></li>
+				
+					<li><a href="../Gosu/Song.html">Gosu::Song</a></li>
+				
+					<li><a href="../Gosu/TextInput.html">Gosu::TextInput</a></li>
+				
+					<li><a href="../Gosu/Window.html">Gosu::Window</a></li>
+				
+					<li><a href="../Numeric.html">Numeric</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Gosu::Color</h1>
+
+		<div id="description">
+			<p>
+Represents an ARGB color value with 8 bits for each channel. Can be
+replaced by literals of the form 0xaarrggbb in all of <a
+href="../Gosu.html">Gosu</a>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="NONE">NONE</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="BLACK">BLACK</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="GRAY">GRAY</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="WHITE">WHITE</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="AQUA">AQUA</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="RED">RED</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="GREEN">GREEN</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="BLUE">BLUE</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="YELLOW">YELLOW</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="FUCHSIA">FUCHSIA</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+				<dt><a name="CYAN">CYAN</a></dt>
+				
+				<dd class="description"><p>
+constant
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="alpha-attribute-method" class="method-detail">
+				<a name="alpha"></a>
+				
+				<a name="alpha="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">alpha</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="red-attribute-method" class="method-detail">
+				<a name="red"></a>
+				
+				<a name="red="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">red</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="green-attribute-method" class="method-detail">
+				<a name="green"></a>
+				
+				<a name="green="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">green</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="blue-attribute-method" class="method-detail">
+				<a name="blue"></a>
+				
+				<a name="blue="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">blue</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="hue-attribute-method" class="method-detail">
+				<a name="hue"></a>
+				
+				<a name="hue="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">hue</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="saturation-attribute-method" class="method-detail">
+				<a name="saturation"></a>
+				
+				<a name="saturation="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">saturation</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="value-attribute-method" class="method-detail">
+				<a name="value"></a>
+				
+				<a name="value="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">value</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="argb-method" class="method-detail ">
+				<a name="method-c-argb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">argb</span><span
+						class="method-args">(a, r, g, b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as the constructor, but with an explicit order.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="argb-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 147</span>
+147:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">argb</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="argb-method" class="method-detail ">
+				<a name="method-c-argb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">argb</span><span
+						class="method-args">(argb)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a color from an 0xrrggbbaa integer.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="argb-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">argb</span>(<span class="ruby-identifier">argb</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-ahsv-method" class="method-detail ">
+				<a name="method-c-from_ahsv"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_ahsv</span><span
+						class="method-args">(a, h, s, v)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a HSV triple into a color, with a given alpha.
+</p>
+<table>
+<tr><td valign="top">a</td><td><p>
+Integer from 0..255
+</p>
+</td></tr>
+<tr><td valign="top">h</td><td><p>
+Integer from 0..360
+</p>
+</td></tr>
+<tr><td valign="top">s</td><td><p>
+Float from 0..1
+</p>
+</td></tr>
+<tr><td valign="top">v</td><td><p>
+Float from 0..1.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="from-ahsv-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 163</span>
+163:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from_ahsv</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">s</span>, <span class="ruby-identifier">v</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-hsv-method" class="method-detail ">
+				<a name="method-c-from_hsv"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_hsv</span><span
+						class="method-args">(h, s, v)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a HSV triple into a color. Same as <a
+href="Color.html#method-c-from_ahsv">from_ahsv</a> with alpha set to 255.
+</p>
+<table>
+<tr><td valign="top">h</td><td><p>
+Integer from 0..360
+</p>
+</td></tr>
+<tr><td valign="top">s</td><td><p>
+Float from 0..1
+</p>
+</td></tr>
+<tr><td valign="top">v</td><td><p>
+Float from 0..1.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="from-hsv-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 156</span>
+156:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from_hsv</span>(<span class="ruby-identifier">h</span>, <span class="ruby-identifier">s</span>, <span class="ruby-identifier">v</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(a, r, g, b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<table>
+<tr><td valign="top">a</td><td><p>
+Integer from 0..255
+</p>
+</td></tr>
+<tr><td valign="top">r</td><td><p>
+Integer from 0..255
+</p>
+</td></tr>
+<tr><td valign="top">g</td><td><p>
+Integer from 0..255
+</p>
+</td></tr>
+<tr><td valign="top">b</td><td><p>
+Integer from 0..255
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 134</span>
+134:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(argb)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a color from an 0xrrggbbaa integer.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 136</span>
+136:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">argb</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgba-method" class="method-detail ">
+				<a name="method-c-rgba"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgba</span><span
+						class="method-args">(r, g, b, a)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as the constructor, but with an explicit order.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rgba-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 141</span>
+141:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rgba</span>(<span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">a</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgba-method" class="method-detail ">
+				<a name="method-c-rgba"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgba</span><span
+						class="method-args">(rgba)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a color from an 0xrrggbbaa integer.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rgba-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 144</span>
+144:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rgba</span>(<span class="ruby-identifier">rgba</span>); <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="dup-method" class="method-detail ">
+				<a name="method-i-dup"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dup</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dup-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 138</span>
+138:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dup</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gl-method" class="method-detail ">
+				<a name="method-i-gl"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gl</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+32-bit unsigned value for use with OpenGL (&#8216;RGBA&#8217; octet in
+memory).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gl-source">
+<pre>
+     <span class="ruby-comment cmt"># File gosu.rb, line 166</span>
+166:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gl</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

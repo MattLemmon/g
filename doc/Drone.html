@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Drone</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./g9_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="g9.rb">g9.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-accelerate">#accelerate</a></li>
+					
+					<li><a href="#method-i-angle">#angle</a></li>
+					
+					<li><a href="#method-i-collect_stars">#collect_stars</a></li>
+					
+					<li><a href="#method-i-draw">#draw</a></li>
+					
+					<li><a href="#method-i-hunger">#hunger</a></li>
+					
+					<li><a href="#method-i-move">#move</a></li>
+					
+					<li><a href="#method-i-movement">#movement</a></li>
+					
+					<li><a href="#method-i-score">#score</a></li>
+					
+					<li><a href="#method-i-score_reset">#score_reset</a></li>
+					
+					<li><a href="#method-i-turn_left">#turn_left</a></li>
+					
+					<li><a href="#method-i-turn_right">#turn_right</a></li>
+					
+					<li><a href="#method-i-veloz">#veloz</a></li>
+					
+					<li><a href="#method-i-warp">#warp</a></li>
+					
+					<li><a href="#method-i-x">#x</a></li>
+					
+					<li><a href="#method-i-y">#y</a></li>
+					
+					<li><a href="#method-i-z">#z</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Drone.html">Drone</a></li>
+				
+					<li><a href="./GameWindow.html">GameWindow</a></li>
+				
+					<li><a href="./Player.html">Player</a></li>
+				
+					<li><a href="./Star.html">Star</a></li>
+				
+					<li><a href="./ZOrder.html">ZOrder</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Drone</h1>
+
+		<div id="description">
+			<p>
+D R O N E    C L A S S
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(window, spawn, x, y, z, veloz)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 108</span>
+108:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">spawn</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>, <span class="ruby-identifier">veloz</span>)
+109:     <span class="ruby-ivar">@window</span> = <span class="ruby-identifier">window</span>
+110:     <span class="ruby-ivar">@spawn</span> = <span class="ruby-identifier">spawn</span>
+111:     <span class="ruby-ivar">@x</span> = <span class="ruby-identifier">x</span>
+112:     <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">y</span>
+113:     <span class="ruby-ivar">@z</span> = <span class="ruby-identifier">z</span>
+114:     <span class="ruby-ivar">@veloz</span> = <span class="ruby-identifier">veloz</span>
+115: <span class="ruby-comment cmt">#    @angle = angle</span>
+116: <span class="ruby-comment cmt">#          @x = rand * 1000</span>
+117: <span class="ruby-comment cmt">#                @y = rand * 600</span>
+118:     <span class="ruby-ivar">@angle</span> = (<span class="ruby-value">45.5</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">315</span>))
+119:     <span class="ruby-ivar">@vel_x</span> = <span class="ruby-ivar">@vel_y</span> = <span class="ruby-value">0.0</span>
+120:     <span class="ruby-ivar">@score</span> = <span class="ruby-value">0</span>
+121:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="accelerate-method" class="method-detail ">
+				<a name="method-i-accelerate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accelerate</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accelerate-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 155</span>
+155:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accelerate</span>
+156:     <span class="ruby-ivar">@vel_x</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">offset_x</span>(<span class="ruby-ivar">@angle</span>, <span class="ruby-identifier">veloz</span>)
+157:     <span class="ruby-ivar">@vel_y</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">offset_y</span>(<span class="ruby-ivar">@angle</span>, <span class="ruby-identifier">veloz</span>)
+158:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="angle-method" class="method-detail ">
+				<a name="method-i-angle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">angle</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="angle-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 139</span>
+139:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">angle</span>
+140:     <span class="ruby-ivar">@angle</span>
+141:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="collect-stars-method" class="method-detail ">
+				<a name="method-i-collect_stars"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">collect_stars</span><span
+						class="method-args">(stars)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="collect-stars-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 194</span>
+194:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collect_stars</span>(<span class="ruby-identifier">stars</span>)
+195:     <span class="ruby-identifier">stars</span>.<span class="ruby-identifier">reject!</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">star</span><span class="ruby-operator">|</span>
+196:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">distance</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-identifier">star</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">star</span>.<span class="ruby-identifier">y</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-value">25</span> <span class="ruby-keyword kw">then</span>
+197:         <span class="ruby-ivar">@score</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1000</span>
+198:         <span class="ruby-keyword kw">true</span>
+199:       <span class="ruby-keyword kw">else</span>
+200:         <span class="ruby-keyword kw">false</span>
+201:       <span class="ruby-keyword kw">end</span>
+202:     <span class="ruby-keyword kw">end</span>
+203:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="draw-method" class="method-detail ">
+				<a name="method-i-draw"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">draw</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="draw-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 186</span>
+186:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draw</span>
+187: <span class="ruby-comment cmt">#    @z = z</span>
+188:     <span class="ruby-identifier">img</span> = <span class="ruby-ivar">@spawn</span>
+189:     <span class="ruby-identifier">img</span>.<span class="ruby-identifier">draw_rot</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-ivar">@z</span>, <span class="ruby-ivar">@angle</span>)
+190: <span class="ruby-comment cmt">#    img.draw_rot(@x, @y, ZOrder::Drone, @angle, 1, 1, @color, :add)</span>
+191: <span class="ruby-comment cmt"># draw_rot(text, x, y, z, angle, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end</span>
+192:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hunger-method" class="method-detail ">
+				<a name="method-i-hunger"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hunger</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hunger-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 213</span>
+213:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hunger</span>
+214:     <span class="ruby-ivar">@score</span> = <span class="ruby-ivar">@score</span> <span class="ruby-operator">-</span><span class="ruby-value">1</span>
+215:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="move-method" class="method-detail ">
+				<a name="method-i-move"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">move</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="move-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 160</span>
+160:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">move</span>
+161:     <span class="ruby-ivar">@x</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@vel_x</span>
+162:     <span class="ruby-ivar">@y</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@vel_y</span>
+163:     <span class="ruby-ivar">@x</span> <span class="ruby-operator">=</span> <span class="ruby-value">1200</span>
+164:     <span class="ruby-ivar">@y</span> <span class="ruby-operator">=</span> <span class="ruby-value">800</span>
+165:     
+166:     <span class="ruby-ivar">@vel_x</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0.70</span>
+167:     <span class="ruby-ivar">@vel_y</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0.70</span>
+168:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="movement-method" class="method-detail ">
+				<a name="method-i-movement"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">movement</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="movement-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 170</span>
+170:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">movement</span>
+171:     <span class="ruby-identifier">c</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-value">100</span>)
+172:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">90</span> <span class="ruby-keyword kw">then</span>
+173:       <span class="ruby-identifier">turn_left</span>
+174:     <span class="ruby-keyword kw">end</span>
+175:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span> <span class="ruby-keyword kw">then</span>
+176:       <span class="ruby-identifier">turn_right</span>
+177:     <span class="ruby-keyword kw">end</span>
+178:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">70</span> <span class="ruby-keyword kw">then</span>
+179:       <span class="ruby-identifier">accelerate</span>
+180:     <span class="ruby-keyword kw">end</span>
+181:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbSpace</span> <span class="ruby-keyword kw">then</span>
+182:       <span class="ruby-identifier">warp</span>(<span class="ruby-identifier">rand</span>(<span class="ruby-value">1200</span>), <span class="ruby-identifier">rand</span>(<span class="ruby-value">800</span>))
+183:     <span class="ruby-keyword kw">end</span>
+184:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="score-method" class="method-detail ">
+				<a name="method-i-score"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">score</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="score-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 205</span>
+205:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">score</span>
+206:     <span class="ruby-ivar">@score</span>
+207:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="score-reset-method" class="method-detail ">
+				<a name="method-i-score_reset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">score_reset</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="score-reset-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 209</span>
+209:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">score_reset</span>
+210:     <span class="ruby-ivar">@score</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1100</span>
+211:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="turn-left-method" class="method-detail ">
+				<a name="method-i-turn_left"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">turn_left</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="turn-left-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 147</span>
+147:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">turn_left</span>
+148:     <span class="ruby-ivar">@angle</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2.5</span>
+149:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="turn-right-method" class="method-detail ">
+				<a name="method-i-turn_right"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">turn_right</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="turn-right-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 151</span>
+151:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">turn_right</span>
+152:     <span class="ruby-ivar">@angle</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2.5</span>
+153:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="veloz-method" class="method-detail ">
+				<a name="method-i-veloz"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">veloz</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="veloz-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 135</span>
+135:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">veloz</span>
+136:     <span class="ruby-ivar">@veloz</span>
+137:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="warp-method" class="method-detail ">
+				<a name="method-i-warp"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">warp</span><span
+						class="method-args">(x,y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="warp-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 143</span>
+143:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">warp</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
+144:     <span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>
+145:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="x-method" class="method-detail ">
+				<a name="method-i-x"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">x</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="x-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 123</span>
+123:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">x</span>
+124:     <span class="ruby-ivar">@x</span>
+125:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="y-method" class="method-detail ">
+				<a name="method-i-y"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">y</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="y-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 127</span>
+127:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">y</span>
+128:     <span class="ruby-ivar">@y</span>
+129:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="z-method" class="method-detail ">
+				<a name="method-i-z"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">z</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="z-source">
+<pre>
+     <span class="ruby-comment cmt"># File g9.rb, line 131</span>
+131:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">z</span>
+132:     <span class="ruby-ivar">@z</span>
+133:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
